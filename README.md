@@ -1,6 +1,24 @@
-# Hi there, I'm Joshua Thomas! 👋
 
-## About Me
+<div id="header" align="center">
+  <img src="https://media.giphy.com/media/jdPMeyv9rn0hZHh8n9/giphy.gif" width="100"/>
+
+
+<div id="badges">
+  <a href="your-linkedin-URL">
+    <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
+  </a>
+  <a href="https://www.youtube.com/channel/UCCTnOo3TmTYjGByLsMBxt7w">
+    <img src="https://img.shields.io/badge/YouTube-red?style=for-the-badge&logo=youtube&logoColor=white" alt="Youtube Badge"/>
+  </a>
+  <a href="your-twitter-URL">
+    <img src="https://img.shields.io/badge/Twitter-blue?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter Badge"/>
+  </a>
+</div>
+</div>
+
+<h1 align="center">Hi there, I'm Joshua Thomas! 👋</h1>
+
+## About Me.
 - 👨‍💻 I'm a 19-year-old undergraduate.
 - 🎓 Currently studying Cybersecurity to enhance my skills and contribute to a safer digital world.
 - 💻 My primary coding language is C++, but I also enjoy working with HTML, CSS, and JavaScript for web development projects.
@@ -17,10 +35,11 @@
 - 🔒 [Project 3](#) - Description of Project 3.
 
 ## 📚 Education
-- Current: [Bath Spa University, Cybersecurity]
+- Current: Bath Spa University.
+- Previous: Garth Olwg.
 
 ## 📫 Get in Touch
-- LinkedIn: [""](#)
-- Twitter: [@""](#)
+- LinkedIn: [](#)
+- Twitter: [@](#)
 
 Feel free to explore my repositories and collaborate on exciting projects! 😄
