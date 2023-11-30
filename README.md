@@ -36,10 +36,9 @@
 
 ## 📚 Education
 - Current: Bath Spa University.
-- Previous: Garth Olwg.
+- Previous: Ysgol Garth Olwg.
 
 ## 📫 Get in Touch
-- LinkedIn: [joshuathomas-dev](#https://www.linkedin.com/in/joshuathomas-dev/)
-- Twitter: [@](#)
-
+- LinkedIn: <a href="https://www.linkedin.com/in/joshuathomas-dev/"> joshuathomas-dev
+  
 Feel free to explore my repositories and collaborate on exciting projects! 😄
