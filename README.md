@@ -39,7 +39,7 @@
 - Previous: Garth Olwg.
 
 ## 📫 Get in Touch
-- LinkedIn: [](#)
+- LinkedIn: [https://www.linkedin.com/in/joshuathomas-dev/](#)
 - Twitter: [@](#)
 
 Feel free to explore my repositories and collaborate on exciting projects! 😄
