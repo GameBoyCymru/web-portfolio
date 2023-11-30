@@ -1,16 +1,26 @@
-### Hi there 👋
+# Hi there, I'm Joshua Thomas! 👋
 
-<!--
-**joshuathomas22/joshuathomas22** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+## About Me
+- 👨‍💻 I'm a 19-year-old undergraduate.
+- 🎓 Currently studying Cybersecurity to enhance my skills and contribute to a safer digital world.
+- 💻 My primary coding language is C++, but I also enjoy working with HTML, CSS, and JavaScript for web development projects.
 
-Here are some ideas to get you started:
+## 🔧 Technologies & Tools
+![C++](https://img.shields.io/badge/-C++-00599C?style=flat&logo=c%2B%2B&logoColor=white)
+![HTML](https://img.shields.io/badge/-HTML-E34F26?style=flat&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/-CSS-1572B6?style=flat&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## 🚀 My Projects
+- 🌐 [Project 1](#) - Short description of Project 1.
+- 📱 [Project 2](#) - Brief overview of Project 2.
+- 🔒 [Project 3](#) - Description of Project 3.
+
+## 📚 Education
+- Current: [Bath Spa University, Cybersecurity]
+
+## 📫 Get in Touch
+- LinkedIn: [""](#)
+- Twitter: [@""](#)
+
+Feel free to explore my repositories and collaborate on exciting projects! 😄
