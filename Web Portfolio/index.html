@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="./Favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./Favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./Favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./Favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./Favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./Favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./Favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./Favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./Favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./Favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./Favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./Favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./Favicons/favicon-16x16.png">
+    <link rel="manifest" href="./Favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./Favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Primary Meta Tags -->
+    <title>Joshua Thomas's Portfolio | Home</title>
+    <meta name="title" content="Joshua Thomas's Portfolio | Home">
+    <meta name="description" content="This is the Home Page of Joshua Thomas's Portfolio.">
+
+    <!-- Google / Search Engine Tags -->
+    <meta itemprop="name" content="Joshua Thomas's Portfolio | Home">
+    <meta itemprop="description" content="This is the Home Page of Joshua Thomas's Portfolio.">
+    <meta itemprop="image"
+        content="http://raw.githubusercontent.com/joshuathomas22/web-dev-project-joshuathomas22/main/Images/me.webp">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="hhttps://joshuathomas22.github.io/web-dev-project-joshuathomas22/">
+    <meta property="og:title" content="Joshua Thomas's Portfolio | Home">
+    <meta property="og:description" content="This is the Home Page of Joshua Thomas's Portfolio.">
+    <meta property="og:image"
+        content="https://raw.githubusercontent.com/joshuathomas22/web-dev-project-joshuathomas22/main/Images/me.webp">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://joshuathomas22.github.io/web-dev-project-joshuathomas22/">
+    <meta property="twitter:title" content="Joshua Thomas's Portfolio | Home">
+    <meta property="twitter:description" content="This is the Home Page of Joshua Thomas's Portfolio.">
+    <meta property="twitter:image"
+        content="https://raw.githubusercontent.com/joshuathomas22/web-dev-project-joshuathomas22/main/Images/me.webp">
+
+    <!-- Load Javascript -->
+    <script defer src="./Javascript/scripts.js"></script>
+</head>
+
+<body>
+
+
+    <header>
+        <nav>
+            <ul>
+                <li><a class="header-links" href="#">Action</a></li>
+                <li><a class="header-links" href="#">Comedy</a></li>
+                <li><a class="header-links" href="#">Romance</a></li>
+                <li><a class="header-links" href="#">Drama</a></li>
+            </ul>
+        </nav>
+
+        <button type="button" id="search-btn">Search</button>
+
+    </header>
+
+    <main>
+
+        <article class="content-box" id="intro-box">
+            <section id="intro">
+                <h1 class="title">Joshua Thomas</h1>
+                <div>
+                    <p id="typing-text"></p>
+                </div>
+                <button type="button" class="watch-btn" id="intro-btn">Read More</button>
+            </section>
+        </article>
+
+        <article id="about" class="content-box">
+            <section>
+
+                <h1 class="title">About Me</h1>
+                <img id="pfp" src="../Images/me.webp" alt="Picture of me holding parrots" title="Joshua Thomas">
+                <section class="description">
+                    <p>I'm a 19-year-old undergraduate deeply immersed in the world of
+                        cybersecurity. Currently studying this dynamic field, my primary coding language is C++,
+                        complemented by my enjoyment of working with HTML, CSS, and JavaScript for web development
+                        projects.
+                        I also serve as a teaching assistant, helping first-year university students grasp the
+                        essentials of
+                        C++.
+                    </p>
+                    <p>
+                        Prior to my tech pursuits, I was a childcare assistant, instilling in me a sense of
+                        responsibility and empathy. During weekends back home, I marshal for the junior park-run,
+                        fostering
+                        community and well-being. My journey is marked by a dedication to cybersecurity and a commitment
+                        to
+                        making a meaningful impact in this ever-evolving landscape.
+                    </p>
+                </section>
+
+            </section>
+        </article>
+
+
+        <article id="projects" class="content-box">
+            <section>
+
+                <h1 class="title">Projects</h1>
+                <p class="movie-description">A struggling actress and a jazz musician in Los Angeles fall in love
+                    while
+                    pursuing their dreams, but
+                    their careers threaten to pull them apart
+                </p>
+                <button type="button" id="boldButton" onclick="toggleBoldText()">Make Bold</button>
+
+            </section>
+        </article>
+
+
+
+        <article class="content-box">
+            <section>
+                <h1 class="title">Contact</h1>
+                <p>If you would like to get into contact with me for any reason, feel free to use any of the following
+                    platforms:
+                </p>
+            </section>
+            <section class="icons">
+                <a href="https://www.instagram.com/p/CegO6OFI_qz/" target="_blank" class="icon instagram">
+                    <img class="iconImg" src="../Icons/instagram.svg" alt="An icon of Instagram">
+                </a>
+
+                <a href="mailto:joshua.thomas22@bathspa.ac.uk" class="icon email">
+                    <img class="iconImg" src="../Icons/email.svg" alt="An email icon">
+                </a>
+
+                <a href="https://github.com/joshuathomas22" target="_blank" class="icon github">
+                    <img class="iconImg" src="../Icons/github.svg" alt="An icon of Github">
+                </a>
+
+                <a href="https://www.linkedin.com/in/joshuathomas-dev/" target="_blank" class="icon linkedin">
+                    <img class="iconImg" src="../Icons/LinkedIn.svg" alt="An icon of LinkedIn">
+                </a>
+            </section>
+        </article>
+
+    </main>
+
+    <footer>
+        <h5>&copy; 2023 Joshua Thomas. All rights reserved.</h5>
+    </footer>
+
+
+</body>
+
+</html>
