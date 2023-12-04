@@ -32,39 +32,44 @@ function erase() {
 type();
 
 
+
+let isBold = false;   // Sets the default state to false
+
 // Bold the first two letters of each paragraph
-let isBold = false;
+function toggleBoldText() {
+  // Get all the paragraph elements on the page
+  const paragraphs = document.querySelectorAll('p');
 
-        function toggleBoldText() {
-            // Get all the paragraph elements on the page
-            const paragraphs = document.querySelectorAll('p');
+  // Iterate through each paragraph element
+  paragraphs.forEach(paragraph => {
+    // Split the text into words
+    const words = paragraph.innerText.split(' ');
 
-            // Iterate through each <p> element
-            paragraphs.forEach(paragraph => {
-                // Split the text into words
-                const words = paragraph.innerText.split(' ');
+    // Iterate through each word and toggle bold styling
+    const formattedWords = words.map(word => {
+      if (word.length >= 2) {
+        const boldText = isBold ? word : `<b>${word.substring(0, 2)}</b>${word.substring(2)}`;
+        return boldText;
+      }
+      return word;
+    });
 
-                // Iterate through each word and toggle bold styling
-                const formattedWords = words.map(word => {
-                    if (word.length >= 2) {
-                        const boldText = isBold ? word : `<b>${word.substring(0, 2)}</b>${word.substring(2)}`;
-                        return boldText;
-                    }
-                    return word;
-                });
+    // Join the formatted words back into a string
+    const formattedText = formattedWords.join(' ');
 
-                // Join the formatted words back into a string
-                const formattedText = formattedWords.join(' ');
+    // Set the inner HTML of the paragraph with the formatted text
+    paragraph.innerHTML = formattedText;
+  });
 
-                // Set the inner HTML of the paragraph with the formatted text
-                paragraph.innerHTML = formattedText;
-            });
+  // Toggle the state
+  isBold = !isBold;
 
-            // Toggle the state
-            isBold = !isBold;
+  // Update the button text
+  const buttonText = isBold ? 'Revert to Normal' : 'Make Bold';
+  document.getElementById('boldButton').innerText = buttonText;
+}
 
-            // Update the button text
-            const buttonText = isBold ? 'Revert to Normal' : 'Make Bold';
-            document.getElementById('boldButton').innerText = buttonText;
-        }
 
+let boldButton = document.getElementById('boldButton');
+
+boldButton.addEventListener('click', toggleBoldText);
