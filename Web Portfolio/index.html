@@ -63,34 +63,31 @@
     <header>
         <nav>
             <ul>
-                <li><a class="header-links" href="#">Action</a></li>
-                <li><a class="header-links" href="#">Comedy</a></li>
-                <li><a class="header-links" href="#">Romance</a></li>
-                <li><a class="header-links" href="#">Drama</a></li>
+                <li><a class="header-links" href="#about">About Me</a></li>
+                <li><a class="header-links" href="#projects">Projects</a></li>
+                <li><a class="header-links" href="#contact">Contact</a></li>
+                <li><a class="header-links" href="#accessability">Accessability</a></li>
             </ul>
         </nav>
-
-        <button type="button" id="search-btn">Search</button>
 
     </header>
 
     <main>
 
-        <article class="content-box" id="intro-box">
-            <section id="intro">
+        <article id="intro-box">
+            <section id="intro" class="content-box">
                 <h1 class="title">Joshua Thomas</h1>
                 <div>
                     <p id="typing-text"></p>
                 </div>
-                <button type="button" class="watch-btn" id="intro-btn">Read More</button>
+                <a href="#about" id="intro-btn">Read More</a>
             </section>
         </article>
 
         <article id="about" class="content-box">
+            <h1 class="title">About Me</h1>
             <section>
-
-                <h1 class="title">About Me</h1>
-                <img id="pfp" src="../Images/me.webp" alt="Picture of me holding parrots" title="Joshua Thomas">
+                <img id="pfp" src="./Images/me.webp" alt="Picture of me holding parrots" title="Joshua Thomas">
                 <section class="description">
                     <p>I'm a 19-year-old undergraduate deeply immersed in the world of
                         cybersecurity. Currently studying this dynamic field, my primary coding language is C++,
@@ -108,6 +105,16 @@
                         to
                         making a meaningful impact in this ever-evolving landscape.
                     </p>
+                    <p id="work">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, repudiandae
+                        vitae. Consectetur, praesentium. Magnam, vero corrupti vitae quasi minima voluptatibus atque
+                        voluptatum veritatis dolore cupiditate hic mollitia, nisi provident molestiae?
+                    </p>
+                    <p id="education">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, repudiandae
+                        vitae. Consectetur, praesentium. Magnam, vero corrupti vitae quasi minima voluptatibus atque
+                        voluptatum veritatis dolore cupiditate hic mollitia, nisi provident molestiae?
+                    </p>
                 </section>
 
             </section>
@@ -115,44 +122,54 @@
 
 
         <article id="projects" class="content-box">
+            <h1 class="title">Projects</h1>
             <section>
-
-                <h1 class="title">Projects</h1>
-                <p class="movie-description">A struggling actress and a jazz musician in Los Angeles fall in love
-                    while
-                    pursuing their dreams, but
-                    their careers threaten to pull them apart
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, repudiandae
+                    vitae. Consectetur, praesentium. Magnam, vero corrupti vitae quasi minima voluptatibus atque
+                    voluptatum veritatis dolore cupiditate hic mollitia, nisi provident molestiae?
                 </p>
-                <button type="button" id="boldButton" onclick="toggleBoldText()">Make Bold</button>
-
             </section>
         </article>
 
 
 
-        <article class="content-box">
+        <article id="contact" class="content-box">
+            <h1 class="title">Contact</h1>
             <section>
-                <h1 class="title">Contact</h1>
                 <p>If you would like to get into contact with me for any reason, feel free to use any of the following
                     platforms:
                 </p>
             </section>
             <section class="icons">
                 <a href="https://www.instagram.com/p/CegO6OFI_qz/" target="_blank" class="icon instagram">
-                    <img class="iconImg" src="../Icons/instagram.svg" alt="An icon of Instagram">
+                    <img class="iconImg" src="./Icons/instagram.svg" alt="An icon of Instagram">
                 </a>
 
                 <a href="mailto:joshua.thomas22@bathspa.ac.uk" class="icon email">
-                    <img class="iconImg" src="../Icons/email.svg" alt="An email icon">
+                    <img class="iconImg" src="./Icons/email.svg" alt="An email icon">
                 </a>
 
                 <a href="https://github.com/joshuathomas22" target="_blank" class="icon github">
-                    <img class="iconImg" src="../Icons/github.svg" alt="An icon of Github">
+                    <img class="iconImg" src="./Icons/github.svg" alt="An icon of Github">
                 </a>
 
                 <a href="https://www.linkedin.com/in/joshuathomas-dev/" target="_blank" class="icon linkedin">
-                    <img class="iconImg" src="../Icons/LinkedIn.svg" alt="An icon of LinkedIn">
+                    <img class="iconImg" src="./Icons/LinkedIn.svg" alt="An icon of LinkedIn">
                 </a>
+            </section>
+        </article>
+
+        <article id="accessability" class="content-box">
+            <h1 class="title">Accessability</h1>
+            <section>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, repudiandae
+                    vitae. Consectetur, praesentium. Magnam, vero corrupti vitae quasi minima voluptatibus atque
+                    voluptatum veritatis dolore cupiditate hic mollitia, nisi provident molestiae?
+                </p>
+                <button type="button" id="boldButton" onclick="toggleBoldText()">Make Bold</button>
+
             </section>
         </article>
 

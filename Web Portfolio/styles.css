@@ -58,18 +58,19 @@ body {
 
 
 header {
-    background-color: rgb(54, 64, 115, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
     display: none;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding: var(--small);
 }
 
 /* Styling for header navigation links */
 header ul {
-    display: none;
+    display: flex;
     flex-direction: row;
+    justify-content: space-around;
     list-style: none;
     gap: var(--large);
 }
@@ -125,14 +126,19 @@ main {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
+.content-box {
+    background-color: rgba(9, 18, 31, 0.6);
+    border: none;
+    border-radius: var(--small);
+    padding: var(--small);
+}
 
 #intro {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: 1fr min-content min-content;
-    /* gap: var(--small); */
     justify-items: center;
-
+    gap: var(--small);
 }
 
 #typing-text {
@@ -145,6 +151,7 @@ main {
 
 .title {
     font-size: 2em;
+    text-align: center;
     font-weight: bold;
 }
 
@@ -155,17 +162,20 @@ main {
 
 }
 
-/* Styling for suggested content */
-.content-box {
-    background-color: rgba(9, 18, 31, 0.6);
-    border: none;
-    border-radius: var(--small);
-    padding: var(--small);
+#intro-box {
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Ensures the buttons are responsive and fit the container for the movie cards*/
+
+
 #intro-btn {
-    background-color: #170f12;
+    background-color: rgb(8, 51, 103);
+    border: none;
+    border-radius: var(--small); 
     padding: var(--small) var(--large);
 }
 
@@ -287,7 +297,7 @@ footer {
 
 /*  Tablets   */
 @media screen and (min-width:720px) {
-    header {
+    header{
         display: flex;
     }
 
@@ -300,14 +310,16 @@ footer {
 /*  Desktops and laptops   */
 @media screen and (min-width:1024px) {
     main {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: var(--large);
     }
 
-  
+    #about {
+        grid-column: span 2;
+    }
 
     #projects {
-        grid-column: span 2;
+        grid-column: span 3;
     }
 
 }
