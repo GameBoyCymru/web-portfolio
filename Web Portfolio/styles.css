@@ -6,6 +6,13 @@
     --small: 10px;
     --large: 40px;
     line-height: 1.4;
+
+    --primary: #a39be3;
+    --secondary: #7a2268;
+    --accent: #e7e7e7;
+    --background: rgb(6, 5, 20, 0.8);
+    --primary-text: #e7e6f7;
+    --secondary-text: #131B23;
 }
 
 * {
@@ -33,7 +40,7 @@ html {
 }
 
 /* Handle */
-::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb { 
     background: #8d8d8d;
     border-radius: 25px;
     border: none;
@@ -46,19 +53,18 @@ html {
 body {
     font-family: 'Poppins', sans-serif;
     font-size: 1.2em;
-    color: #e7e7e7;
+    color: var(--primary-text);
     background-color: #000000;
-    background-image: url("./Backgrounds/Midnight-Stroll.png");
+    background-image: url("./Backgrounds/island.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
-
 }
 
 
 header {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: var(--background);
     display: none;
     flex-direction: row;
     align-items: center;
@@ -88,7 +94,7 @@ header ul {
 a {
     text-decoration: none;
     /* Removes underline from links */
-    color: #fff;
+    color: var(--primary-text);
 }
 
 /* Styling for logo and button */
@@ -96,7 +102,7 @@ a {
 button,
 h1 {
     font-family: 'Rockwell';
-    color: #fff;
+    color: var(--primary-text);
 }
 
 #logo {
@@ -104,12 +110,18 @@ h1 {
     text-align: left;
 }
 
-button {
+.button {
     font-size: 1em;
     border-radius: var(--small);
-    padding: var(--small);
+    padding: var(--small) var(--large);
     border: none;
-    background-color: #19325b;
+    background-color: var(--primary);
+    color: var(--secondary-text);
+}
+
+button:is(:hover, :focus) {
+    cursor: pointer;
+    background-color: var(--secondary);
 }
 
 /* Styling for the main content - aimed for small mobile devices */
@@ -123,14 +135,25 @@ main {
     gap: var(--large);
     box-sizing: content-box;
     /* Setting box-sizing to content-box to prevent padding from affecting the width of the container */
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(9, 18, 31, 0.4);
+
 }
 
 .content-box {
-    background-color: rgba(9, 18, 31, 0.6);
+    background-color: var(--background);
     border: none;
     border-radius: var(--small);
     padding: var(--small);
+    position: relative;
+}
+
+#intro-box {
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
 }
 
 #intro {
@@ -139,6 +162,7 @@ main {
     grid-template-rows: 1fr min-content min-content;
     justify-items: center;
     gap: var(--small);
+    background: none;
 }
 
 #typing-text {
@@ -153,6 +177,8 @@ main {
     font-size: 2em;
     text-align: center;
     font-weight: bold;
+    position: sticky;
+    top: 0;
 }
 
 .description {
@@ -161,25 +187,6 @@ main {
     gap: var(--small);
 
 }
-
-#intro-box {
-    text-align: center;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-
-#intro-btn {
-    background-color: rgb(8, 51, 103);
-    border: none;
-    border-radius: var(--small); 
-    padding: var(--small) var(--large);
-}
-
-
 
 /* CSS for the Social Media Icons */
 .icons {
@@ -254,6 +261,11 @@ main {
 
 /* .............................................. */
 
+
+
+.project-list {
+    padding: var(--small) var(--large);
+}
 
 
 footer {
