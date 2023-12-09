@@ -12,7 +12,7 @@
     --accent: #e7e7e7;
     --background: rgba(6, 5, 20, 0.8);
 
-    
+
     --primary-text: #e7e6f7;
     --secondary-text: #131B23;
 
@@ -346,12 +346,37 @@ main {
     font-weight: bold;
 }
 
+
+/* .............................................. */
+
+.about-section {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: var(--small);
+}
+
+
+/* CSS for the Profile Picture */
+#pfp {
+    /* zoom into the image to make it a circle */
+    width: 50%;
+    object-fit:contain;
+    border-radius: 20%;
+    margin: 0 auto;
+}
+
+
 .description {
     display: flex;
     flex-direction: column;
     gap: var(--small);
 
 }
+
+
+
+/* .............................................. */
+
 
 /* CSS for the Social Media logo-icons */
 .logo-icons {
@@ -410,22 +435,6 @@ main {
     filter: invert(100%) sepia(0%) saturate(1513%) hue-rotate(233deg) brightness(107%) contrast(101%);
 }
 
-/* .............................................. */
-
-
-
-
-/* CSS for the Profile Picture */
-#pfp {
-    /* zoom into the image to make it a circle */
-    width: 50%;
-    object-fit:contain;
-    border-radius: 50%;
-    border: 5px solid #000000;
-
-}
-
-/* .............................................. */
 
 
 
@@ -489,17 +498,20 @@ footer {
         display: flex;
     }
 
-    #intro-box {
-        display: none;
-    }
+    
 
 }
 
 /*  Desktops and laptops   */
 @media screen and (min-width:1024px) {
+    
     main {
         grid-template-columns: repeat(3, 1fr);
         gap: var(--large);
+    }
+
+    #intro-box {
+        display: none;
     }
 
     #about {
