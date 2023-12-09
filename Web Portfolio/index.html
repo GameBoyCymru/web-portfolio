@@ -61,16 +61,102 @@
 
 
     <header>
-        <nav>
-            <ul>
-                <li><a class="header-links" href="#about">About Me</a></li>
-                <li><a class="header-links" href="#projects">Projects</a></li>
-                <li><a class="header-links" href="#contact">Contact</a></li>
-                <li><a class="header-links" href="#accessability">Accessability</a></li>
-            </ul>
-        </nav>
+        <nav class="navigation-bar">
+            <button class="nav-btn" type="button">
+                <img src="./Icons/menu-icon.svg" alt="Menu Icon" class="icon">
+            </button>
+            <h1 class="screen-title">Home</h1>
 
+            <button class="settings" type="button">
+               <img src="./Icons/settings-icon.svg" alt="Settings Icon" class="icon">
+            </button>
+        </nav>
     </header>
+
+
+
+    <!-- Page Navigation -->
+
+    <aside class="quick-nav none hide">
+
+        <div class="quick-nav-headline">
+            <h2>Page Content</h2>
+            <button class="nav-close" type="button">
+                <img src="./Icons/close-icon.svg" class="icon" alt="Close Icon">
+            </button>
+        </div>
+
+        <div class="quick-nav-content">
+            <label class="switch-wrapper">
+                <span class="switch-label">
+                    Home
+                </span>
+            </label>
+
+            <label class="switch-wrapper">
+                <span class="switch-label">
+                    About Me
+                </span>
+            </label>
+
+            <label class="switch-wrapper">
+                <span class="switch-label">
+                    Projects
+                </span>
+            </label>
+
+            <label class="switch-wrapper">
+                <span class="switch-label">
+                    Contact
+                </span>
+            </label>
+
+        </div>
+
+    </aside>
+
+    <!-- Quick Settings -->
+    <aside class="quick-settings none hide">
+
+        <div class="quick-settings-headline">
+            <h2>Quick Settings</h2>
+                <button class="settings-close" type="button">
+                    <img src="./Icons/close-icon.svg" class="icon" alt="Close Icon">
+            </button>
+        </div>
+
+        <div class="quick-settings-content">
+
+            <label class="switch-wrapper">
+                <span class="switch-label">Dark Mode</span>
+                <span class="switch">
+                    <input type="checkbox" id="darkModeToggle">
+                    <span class="slider round"></span>
+                </span>
+            </label>
+
+            <label class="switch-wrapper">
+                <span class="switch-label">Bold Text</span>
+                <span class="switch">
+                    <input type="checkbox" id="boldTextToggle">
+                    <span class="slider round"></span>
+                </span>
+            </label>
+
+            <label class="switch-wrapper">
+                <span class="switch-label">Solid Colours</span>
+                <span class="switch">
+                    <input type="checkbox" id="solidColoursToggle">
+                    <span class="slider round"></span>
+                </span>
+            </label>
+
+        </div>
+
+    </aside>
+
+
+    <!-- Main Content -->
 
     <main>
 
@@ -84,8 +170,8 @@
             </section>
         </section>
 
-        <section id="about" class="content-box">
-            <h1 class="title">About Me</h1>
+        <section  class="content-box">
+            <h1 id="about" class="title">About Me</h1>
             <section>
                 <img id="pfp" src="./Images/me.webp" alt="Picture of me holding parrots" title="Joshua Thomas">
                 <section class="description">
@@ -156,35 +242,22 @@
                     platforms:
                 </p>
             </section>
-            <section class="icons">
-                <a href="https://www.instagram.com/p/CegO6OFI_qz/" target="_blank" class="icon instagram">
+            <section class="logo-icons">
+                <a href="https://www.instagram.com/p/CegO6OFI_qz/" target="_blank" class="logo-icon instagram">
                     <img class="iconImg" src="./Icons/instagram.svg" alt="An icon of Instagram">
                 </a>
 
-                <a href="mailto:joshua.thomas22@bathspa.ac.uk" class="icon email">
+                <a href="mailto:joshua.thomas22@bathspa.ac.uk" class="logo-icon email">
                     <img class="iconImg" src="./Icons/email.svg" alt="An email icon">
                 </a>
 
-                <a href="https://github.com/joshuathomas22" target="_blank" class="icon github">
+                <a href="https://github.com/joshuathomas22" target="_blank" class="logo-icon github">
                     <img class="iconImg" src="./Icons/github.svg" alt="An icon of Github">
                 </a>
 
-                <a href="https://www.linkedin.com/in/joshuathomas-dev/" target="_blank" class="icon linkedin">
+                <a href="https://www.linkedin.com/in/joshuathomas-dev/" target="_blank" class="logo-icon linkedin">
                     <img class="iconImg" src="./Icons/LinkedIn.svg" alt="An icon of LinkedIn">
                 </a>
-            </section>
-        </section>
-
-        <section id="accessability" class="content-box">
-            <h1 class="title">Accessability</h1>
-            <section>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, repudiandae
-                    vitae. Consectetur, praesentium. Magnam, vero corrupti vitae quasi minima voluptatibus atque
-                    voluptatum veritatis dolore cupiditate hic mollitia, nisi provident molestiae?
-                </p>
-                <button type="button" class="button" id="boldButton">Make Bold</button>
-
             </section>
         </section>
 

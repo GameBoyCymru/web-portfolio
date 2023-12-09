@@ -10,7 +10,7 @@
     --primary: #a39be3;
     --secondary: #7a2268;
     --accent: #e7e7e7;
-    --background: rgb(6, 5, 20, 0.8);
+    --background: #08007f;
     --primary-text: #e7e6f7;
     --secondary-text: #131B23;
 }
@@ -54,7 +54,7 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size: 1.2em;
     color: var(--primary-text);
-    background-color: #000000;
+    background-color: var(--background);
     background-image: url("./Backgrounds/island.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -63,66 +63,201 @@ body {
 }
 
 
-header {
-    background-color: var(--background);
-    display: none;
-    flex-direction: row;
+button {
+    all: unset;
+    cursor: pointer;
+    display: flex;
     align-items: center;
     justify-content: center;
-    padding: var(--small);
 }
 
-/* Styling for header navigation links */
-header ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    list-style: none;
-    gap: var(--large);
+button:focus {
+    outline: revert
 }
 
-
-/* Changes the colour of header items if they are being focused by mouse or keyboard */
-.header-links:hover,
-.header-links:focus {
-    cursor: pointer;
-    color: #ef3e36;
-    outline: none;
+html {
+    scroll-behavior: smooth;
 }
 
-/* Styling for general links */
-a {
-    text-decoration: none;
-    /* Removes underline from links */
-    color: var(--primary-text);
-}
-
-/* Styling for logo and button */
-#logo,
-button,
-h1 {
-    font-family: 'Rockwell';
-    color: var(--primary-text);
-}
-
-#logo {
-    font-size: 3em;
-    text-align: left;
-}
-
-.button {
-    font-size: 1em;
-    border-radius: var(--small);
-    padding: var(--small) var(--large);
-    border: none;
+header {
+    height: 80px;
+    padding: 0 16px;
     background-color: var(--primary);
-    color: var(--secondary-text);
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    box-shadow:
+        rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-button:is(:hover, :focus) {
-    cursor: pointer;
-    background-color: var(--secondary);
+
+.navigation-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 6px;
 }
+
+.navigation-bar .icon {
+    width: 48px;
+    height: 48px;
+    padding: 6px;
+    transition: all 0.2s ease-in-out;
+    border-radius: 50%;
+}
+
+.navigation-bar button:hover,
+.navigation-bar button:focus {
+    background-color: var(--primary);
+    border-radius: 50%;
+}
+
+
+.quick-nav,
+.quick-settings {
+    top: 0;
+    background-color: var(--secondary);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+    width: 100%;
+    padding: 16px 25px;
+    position: fixed;
+    gap: var(--large);
+    box-shadow:
+        rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    animation: fadeInAnimation ease-in-out 0.5s forwards;
+    z-index: 10;
+}
+
+.quick-nav {
+    left: 0;
+}
+
+.quick-settings {
+    right: 0;
+}
+
+.quick-nav-content,
+.quick-settings-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.quick-nav-headline,
+.quick-settings-headline {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.none {
+    display: none;
+}
+
+.hide {
+    opacity: 0;
+    visibility: hidden;
+    animation: fadeOutAnimation ease-in-out 0.5s forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        width: 0px;
+    }
+
+    100% {
+        opacity: 1;
+        visibility: visible;
+        width: 350px;
+    }
+}
+
+@keyframes fadeOutAnimation {
+    0% {
+        opacity: 1;
+        width: 350px;
+        visibility: visible;
+    }
+
+    100% {
+        opacity: 0;
+        width: 0px;
+        visibility: hidden;
+    }
+}
+
+/* Switch button  */
+.switch-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content:
+        space-between;
+}
+
+.switch-label {
+    white-space: nowrap;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background-color: var(--secondary-text);
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+}
+
+.switch input:checked+.slider {
+    background-color: var(--primary);
+}
+
+.switch input:checked+.slider:before {
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
 
 /* Styling for the main content - aimed for small mobile devices */
 main {
@@ -134,8 +269,6 @@ main {
     /* Setting grid to 1 column by default */
     gap: var(--large);
     box-sizing: content-box;
-    /* Setting box-sizing to content-box to prevent padding from affecting the width of the container */
-    background-color: rgba(9, 18, 31, 0.4);
 
 }
 
@@ -177,8 +310,6 @@ main {
     font-size: 2em;
     text-align: center;
     font-weight: bold;
-    position: sticky;
-    top: 0;
 }
 
 .description {
@@ -188,8 +319,8 @@ main {
 
 }
 
-/* CSS for the Social Media Icons */
-.icons {
+/* CSS for the Social Media logo-icons */
+.logo-icons {
     display: grid;
     grid-template-columns: repeat(2, min-content);
     width: 50%;
@@ -200,7 +331,7 @@ main {
     justify-content: center;
 }
 
-.icon {
+.logo-icon {
     display: flex;
     width: 60px;
     height: 60px;
@@ -212,7 +343,7 @@ main {
     transition-duration: 1s;
 }
 
-.icon:hover {
+.logo-icon:hover {
     animation: SocialSpin 1s ease 0s 1 normal forwards;
 }
 
@@ -277,12 +408,7 @@ footer {
 
 
 
-
-
-
-
-
-/* CSS to spin the social media icons 360 degrees */
+/* CSS to spin the social media logo-icons 360 degrees */
 @keyframes SocialSpin {
     0% {
         transform: rotate(0);
@@ -301,7 +427,7 @@ footer {
 
 /*  Larger Mobile Devices   */
 @media screen and (min-width:425px) {
-    .icons {
+    .logo-icons {
         grid-template-columns: repeat(4, 1fr);
         justify-items: center;
     }
