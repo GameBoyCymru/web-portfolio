@@ -86,11 +86,11 @@ a {
     color: var(--secondary-text);
     font-weight: bold;
     transition: all 0.2s ease-in-out;
-
 }
 
-button:focus {
-    outline: revert
+.button:is(:hover, :focus) {
+    background-color: var(--secondary);
+    color: var(--primary-text);
 }
 
 html {
@@ -132,11 +132,12 @@ header {
     border-radius: 50%;
 }
 
-.navigation-bar button:hover,
-.navigation-bar button:focus {
+
+.navigation-bar button:is(:hover, :focus) {
     background-color: var(--secondary-text);
     border-radius: 50%;
 }
+
 
 .quick-nav,
 .quick-settings {
@@ -290,6 +291,8 @@ main {
     /* Setting grid to 1 column by default */
     gap: var(--large);
     box-sizing: content-box;
+    /* Prevents the content from overflowing */
+    background-color: rgba(0, 0, 0, 0.5);
 
 }
 
@@ -325,6 +328,7 @@ main {
     align-items: center;
     font-size: 1em;
     height: 3em;
+    
 }
 
 .title {
@@ -364,11 +368,11 @@ main {
     transition-duration: 1s;
 }
 
-.logo-icon:hover {
+.logo-icon:is(:hover, :focus) {
     animation: SocialSpin 1s ease 0s 1 normal forwards;
 }
 
-.instagram:hover {
+.instagram:is(:hover, :focus) {
     background-image: radial-gradient(circle at 30% 107%,
             #fdf497 0%,
             #fdf497 5%,
@@ -377,16 +381,16 @@ main {
             #285aeb 90%);
 }
 
-.linkedin:hover {
+.linkedin:is(:hover, :focus) {
     background-color: #007ab9;
 }
 
-.email:hover {
-    background-color: #0077b5;
+.email:is(:hover, :focus) {
+    background-color: #60c1f5;
 }
 
-.github:hover {
-    background-color: #9243da;
+.github:is(:hover, :focus) {
+    background-color: #985ef0;
 }
 
 .iconImg {
@@ -417,8 +421,22 @@ main {
 
 .project-list {
     padding: var(--small) var(--large);
+    display: flex;
+    flex-direction: column;
+    gap: var(--small);
 }
 
+.project-section {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: var(--small);
+    padding: var(--small) 0;
+
+}
+
+.git-link {
+    text-decoration: underline var(--primary);
+}
 
 footer {
     background-color: rgba(0, 0, 0, 0.5);

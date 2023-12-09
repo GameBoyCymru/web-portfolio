@@ -119,32 +119,50 @@ closeNav.addEventListener('click', () => {
 });
 
 
+/*
+------------------------------------------------------------
+*/
+
+// Update screen title based on scroll position
+
+document.addEventListener("DOMContentLoaded", function () {
+  const sections = document.querySelectorAll("section.content-box");
+  const screenTitle = document.querySelector(".screen-title");
+
+  function updateScreenTitle() {
+      let maxVisibleArea = 0;
+      let activeSection = null;
+
+      sections.forEach(section => {
+          const rect = section.getBoundingClientRect();
+          const visibleArea = Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0);
+
+          if (visibleArea > maxVisibleArea) {
+              maxVisibleArea = visibleArea;
+              activeSection = section;
+          }
+      });
+
+      if (activeSection) {
+          if (activeSection.id === "intro") {
+              screenTitle.textContent = "Home";
+          } else {
+              screenTitle.textContent = activeSection.querySelector(".title").textContent;
+          }
+      }
+  }
+
+  // Initial update
+  updateScreenTitle();
+
+  // Update on scroll
+  window.addEventListener("scroll", updateScreenTitle);
+});
 
 
-// Get all sections and screen title
-const sections = document.querySelectorAll('.container');
-const screenTitle = document.querySelector('.screen-title');
 
-// Function to update screen title based on scroll position
-function updateScreenTitle() {
-    let closestSection = sections[0]; // Initialize with the first section
 
-    sections.forEach((section) => {
-        const rect = section.getBoundingClientRect();
-        const currentClosestRect = closestSection.getBoundingClientRect();
 
-        // Check if the current section is closer to the top of the viewport
-        if (Math.abs(rect.top) < Math.abs(currentClosestRect.top)) {
-            closestSection = section;
-        }
-    });
-
-    // Update the screen title with the closest section's title
-    screenTitle.textContent = closestSection.querySelector('h1').textContent;
-}
-
-// Listen for scroll events and update screen title
-document.addEventListener('scroll', updateScreenTitle);
 
 /*
 ------------------------------------------------------------
