@@ -296,7 +296,11 @@ main {
     /* Centers the content */
     padding: var(--small);
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas:
+        "intro"
+        "about"
+        "projects"
+        "contact";
     /* Setting grid to 1 column by default */
     gap: var(--large);
     box-sizing: content-box;
@@ -319,8 +323,21 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-  
+    grid-area: intro;
 }
+
+#about {
+    grid-area: about;
+}
+
+#projects {
+    grid-area: projects;
+}
+
+#contact {
+    grid-area: contact;
+}
+
 
 #intro {
     display: grid;
@@ -373,7 +390,15 @@ main {
 
 }
 
+#experience {
+    display: none;
+}
 
+.experience-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--small);
+}
 
 /* .............................................. */
 
@@ -437,20 +462,19 @@ main {
 
 
 
-
-.project-list {
-    padding: var(--small) var(--large);
-    display: flex;
-    flex-direction: column;
-    gap: var(--small);
-}
-
 .project-section {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: var(--small);
     padding: var(--small) 0;
 
+}
+
+.project-list {
+    padding: var(--small) var(--large);
+    display: flex;
+    flex-direction: column;
+    gap: var(--small);
 }
 
 .git-link {
@@ -506,20 +530,23 @@ footer {
 @media screen and (min-width:1024px) {
     
     main {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+            "intro intro intro"
+            "about about contact"
+            "about about experience"
+            "projects projects projects";
         gap: var(--large);
     }
 
-    #intro-box {
+    .work,
+    .education {
         display: none;
     }
 
-    #about {
-        grid-column: span 2;
+    #experience {
+        display: block;
     }
 
-    #projects {
-        grid-column: span 3;
-    }
+    
 
 }
