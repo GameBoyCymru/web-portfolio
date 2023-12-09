@@ -10,9 +10,12 @@
     --primary: #a39be3;
     --secondary: #7a2268;
     --accent: #e7e7e7;
-    --background: #08007f;
+    --background: rgba(6, 5, 20, 0.8);
     --primary-text: #e7e6f7;
     --secondary-text: #131B23;
+
+    --nav-primary: ;
+    --nav-background: rgb(6, 5, 20);
 }
 
 * {
@@ -55,7 +58,7 @@ body {
     font-size: 1.2em;
     color: var(--primary-text);
     background-color: var(--background);
-    background-image: url("./Backgrounds/island.png");
+    background-image: url("./Backgrounds/island-dark.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -71,18 +74,37 @@ button {
     justify-content: center;
 }
 
+a {
+    text-decoration: none;
+    color: var(--primary-text);
+}
+
+.button {
+    padding: var(--small);
+    border-radius: var(--small);
+    background-color: var(--primary);
+    color: var(--secondary-text);
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+
+}
+
 button:focus {
     outline: revert
 }
 
 html {
     scroll-behavior: smooth;
+    /* smooth scrolling */
+    scroll-padding-top: 100px;
+    /* height of the navbar */
 }
 
 header {
     height: 80px;
     padding: 0 16px;
     background-color: var(--primary);
+    color: var(--secondary-text);
     width: 100%;
     position: sticky;
     top: 0;
@@ -112,15 +134,14 @@ header {
 
 .navigation-bar button:hover,
 .navigation-bar button:focus {
-    background-color: var(--primary);
+    background-color: var(--secondary-text);
     border-radius: 50%;
 }
-
 
 .quick-nav,
 .quick-settings {
     top: 0;
-    background-color: var(--secondary);
+    background-color: var(--nav-background);
     height: 100vh;
     display: flex;
     flex-direction: column;
