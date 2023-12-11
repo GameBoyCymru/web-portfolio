@@ -184,12 +184,12 @@ function toggleDarkMode() {
   } else {
       // Apply light mode if the checkbox is unchecked
       document.documentElement.style.setProperty('--primary', '#8fffbc');
-      document.documentElement.style.setProperty('--secondary', '#7a2268');
+      document.documentElement.style.setProperty('--secondary', '#a39be3');
       document.documentElement.style.setProperty('--background', 'rgba(6, 5, 20, 0.8)');
       document.documentElement.style.setProperty('--background-image', 'url("./Backgrounds/island-light.png")');
       document.documentElement.style.setProperty('--primary-text', '#e7e6f7');
       document.documentElement.style.setProperty('--secondary-text', '#131B23');
-      document.documentElement.style.setProperty('--nav-background', 'rgb(234 233 253 / 80%)');
+      document.documentElement.style.setProperty('--nav-background', 'rgb(234 233 253 / 90%)');
       document.documentElement.style.setProperty('--nav-text', '#131B23');
       document.documentElement.style.setProperty('--exit-filter', 'invert(8%) sepia(14%) saturate(1423%) hue-rotate(169deg) brightness(94%) contrast(94%)');
     }
