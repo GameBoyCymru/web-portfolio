@@ -100,8 +100,6 @@ closeSettings.addEventListener('click', () => {
     quickSettings.classList.add('hide');
 });
 
-
-
 // Open and close the navigation menu
 const navButton = document.querySelector('.nav-btn');
 const closeNav = document.querySelector('.nav-close');
@@ -114,6 +112,17 @@ navButton.addEventListener('click', () => {
 
 closeNav.addEventListener('click', () => {
     navSettings.classList.add('hide');
+});
+
+// Close quick settings and quick navigation if clicked outside
+document.addEventListener('click', (event) => {
+    if (!quickSettings.contains(event.target) && !settingsButton.contains(event.target)) {
+        quickSettings.classList.add('hide');
+    }
+
+    if (!navSettings.contains(event.target) && !navButton.contains(event.target)) {
+        navSettings.classList.add('hide');
+    }
 });
 
 
