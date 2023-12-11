@@ -184,6 +184,7 @@ header {
     z-index: 10;
     gap: var(--small);
     color: var(--nav-text);
+    backdrop-filter: blur(10px);
 }
 
 .nav-link {
