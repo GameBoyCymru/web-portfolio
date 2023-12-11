@@ -512,15 +512,25 @@ main {
 
 }
 
+.project {
+    display: flex;
+    flex-direction: column;
+    padding: var(--small);
+    justify-content: space-between;
+}
+
 .project-list {
-    padding: var(--small) var(--large);
+    padding: var(--small);
     display: flex;
     flex-direction: column;
     gap: var(--small);
+    flex: 1;
 }
 
 .git-link {
     text-decoration: underline var(--primary);
+    width: fit-content;
+    align-self: center;
 }
 
 footer {
@@ -607,7 +617,6 @@ footer {
         background-color: var(--background);
         border: none;
         border-radius: var(--small);
-        padding: var(--small);
     }
 
 }
