@@ -182,7 +182,7 @@ function toggleDarkMode() {
       document.documentElement.style.setProperty('--primary', '#a39be3');
       document.documentElement.style.setProperty('--secondary', '#7a2268');
       document.documentElement.style.setProperty('--background', 'rgba(6, 5, 20, 0.8)');
-      document.documentElement.style.setProperty('--background-image', 'url("./Backgrounds/island-dark.png")');
+      document.documentElement.style.setProperty('--background-image', 'url("./Backgrounds/island-dark.webp")');
       document.documentElement.style.setProperty('--primary-text', '#e7e6f7');
       document.documentElement.style.setProperty('--secondary-text', '#131B23');
       document.documentElement.style.setProperty('--nav-background', 'rgb(6 5 20 / 95%)');
@@ -195,7 +195,7 @@ function toggleDarkMode() {
       document.documentElement.style.setProperty('--primary', '#8fffbc');
       document.documentElement.style.setProperty('--secondary', '#a39be3');
       document.documentElement.style.setProperty('--background', 'rgba(6, 5, 20, 0.8)');
-      document.documentElement.style.setProperty('--background-image', 'url("./Backgrounds/island-light.png")');
+      document.documentElement.style.setProperty('--background-image', 'url("./Backgrounds/island-light.webp")');
       document.documentElement.style.setProperty('--primary-text', '#e7e6f7');
       document.documentElement.style.setProperty('--secondary-text', '#131B23');
       document.documentElement.style.setProperty('--nav-background', 'rgb(234 233 253 / 90%)');
