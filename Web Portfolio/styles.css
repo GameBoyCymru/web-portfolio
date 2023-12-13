@@ -59,7 +59,7 @@ html {
 /* Styling for the body */
 body {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.2em;
+    font-size: 1em;
     color: var(--primary-text);
     background-color: var(--background);
 
@@ -82,6 +82,10 @@ body::before {
     /* blur the background only */
     filter: blur(4px);
     -webkit-filter: blur(4px);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: rockwell;
 }
 
 button {
@@ -349,7 +353,7 @@ main {
     gap: var(--large);
     box-sizing: content-box;
     /* Prevents the content from overflowing */
-    max-width: 1024px;
+    max-width: 1200px;
 }
 
 .content-box {
@@ -379,6 +383,7 @@ main {
 
 #contact {
     grid-area: contact;
+    height: min-content;
 }
 
 
@@ -430,6 +435,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: var(--small);
+    align-items: center;
 
 }
 
@@ -534,6 +540,12 @@ main {
     align-self: center;
 }
 
+.github-stats{
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
 footer {
     background-color: var(--primary);
     color: var(--secondary-text);
@@ -571,6 +583,10 @@ footer {
         grid-template-columns: repeat(4, 1fr);
         justify-items: center;
     }
+
+    .github-stats{
+        max-width: 80%;
+    }
 }
 
 /*  Tablets   */
@@ -584,12 +600,24 @@ footer {
         display: flex;
     }
 
-    
+   
 
+}
+
+/*  Small laptops   */
+@media screen and (min-width:900px) {
+    
+    .github-stats{
+        max-width: 60%;
+    }
 }
 
 /*  Desktops and laptops   */
 @media screen and (min-width:1024px) {
+
+    body {
+        font-size: 1.4em;
+    }
 
     main {
         grid-template-areas: 
@@ -598,7 +626,6 @@ footer {
             "about about experience"
             "projects projects projects";
         gap: var(--large);
-        font-size: 1em;
     }
 
     .work,
@@ -618,6 +645,10 @@ footer {
         background-color: var(--background);
         border: none;
         border-radius: var(--small);
+    }
+
+    .github-stats{
+        max-width: 100%;
     }
 
 }
