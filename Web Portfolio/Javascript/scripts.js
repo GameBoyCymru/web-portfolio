@@ -177,6 +177,16 @@ function toggleDarkMode() {
   // Get the checkbox for dark mode
   const darkModeCheckbox = document.getElementById('darkModeToggle');
 
+    // Determine the theme based on the state of the toggle
+    const theme = darkModeCheckbox.checked ? 'dark' : 'light';
+
+    // Update the source of the GitHub stats images
+    const profileStatsImage = document.getElementById('profile-stats');
+    const languageStatsImage = document.getElementById('language-stats');
+    profileStatsImage.src = `https://raw.githubusercontent.com/joshuathomas22/github-stats/master/generated/overview.svg#gh-${theme}-mode-only`;
+    languageStatsImage.src = `https://raw.githubusercontent.com/joshuathomas22/github-stats/master/generated/languages.svg#gh-${theme}-mode-only`;
+
+
   // Apply dark mode if the checkbox is checked
   if (darkModeCheckbox.checked) {
       document.documentElement.style.setProperty('--primary', '#a39be3');
