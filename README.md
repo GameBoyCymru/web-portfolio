@@ -36,6 +36,11 @@
 - 📱 [Project 2](#) - Brief overview of Project 2.
 - 🔒 [Project 3](#) - Description of Project 3.
 
+![](https://raw.githubusercontent.com/joshuathomas22/github-stats/master/generated/overview.svg)
+![](https://raw.githubusercontent.com/joshuathomas22/github-stats/master/generated/languages.svg)
+
+
+
 ## 📚 Education
 - Current: Bath Spa University.
 - Previous: Ysgol Garth Olwg.
