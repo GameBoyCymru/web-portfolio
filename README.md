@@ -16,7 +16,9 @@
 </div>
 </div>
 
-<h1 align="center">Hi there, I'm Joshua Thomas! 👋</h1>
+<h1 align="center">Hi there, I'm Joshua Thomas! 👋
+<p align="center"> <img src="https://komarev.com/ghpvc/?username=joshuathomas22&label=Profile%20views&color=0e75b6&style=flat" alt="joshuathomas22" /> </p></h1>
+
 
 ## About Me.
 - 👨‍💻 I'm a 19-year-old undergraduate.
