@@ -209,11 +209,11 @@ header {
     flex-direction: column;
     gap: var(--large);
     padding: var(--small);
-
 }
 
 .quick-nav-content {
-    font-size: 1.4em;
+    font-size: 1.6em;
+    padding-left: var(--large);
 }
 
 .quick-nav-headline,
@@ -266,23 +266,23 @@ header {
 }
 
 /* Switch button  */
-.switch-wrapper {
+.menu-wrapper {
     width: 100%;
     display: flex;
     align-items: center;
     gap: 8px;
-    justify-content:
-        space-between;
+    justify-content:space-between;
 }
 
-.switch-content {
+.menu-content {
     display: flex;
     flex-direction: column;
     gap: var(--small);
 }
 
-.switch-label {
+.menu-label {
     white-space: nowrap;
+    font-size: 1.3em;
 }
 
 .switch {
