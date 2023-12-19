@@ -36,27 +36,28 @@
     <!-- Google / Search Engine Tags -->
     <meta itemprop="name" content="Joshua Thomas's Portfolio | Home">
     <meta itemprop="description" content="This is the Home Page of Joshua Thomas's Portfolio.">
-    <meta itemprop="image"
-        content="https://cymru.dev/Images/me.webp">
+    <meta itemprop="image" content="https://cymru.dev/Images/me.webp">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="hhttps://joshuathomas22.github.io/web-dev-project-joshuathomas22/">
     <meta property="og:title" content="Joshua Thomas's Portfolio | Home">
     <meta property="og:description" content="This is the Home Page of Joshua Thomas's Portfolio.">
-    <meta property="og:image"
-        content="https://cymru.dev/Images/me.webp">
+    <meta property="og:image" content="https://cymru.dev/Images/me.webp">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://joshuathomas22.github.io/web-dev-project-joshuathomas22/">
     <meta property="twitter:title" content="Joshua Thomas's Portfolio | Home">
     <meta property="twitter:description" content="This is the Home Page of Joshua Thomas's Portfolio.">
-    <meta property="twitter:image"
-        content="https://cymru.dev/Images/me.webp">
+    <meta property="twitter:image" content="https://cymru.dev/Images/me.webp">
 
     <!-- Load Javascript -->
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script> <!-- Must load before the HTML -->
     <script defer src="./Javascript/scripts.js"></script>
+    <script defer src="./Javascript/page-styling.js"></script>
+
 </head>
 
 <body>
@@ -148,7 +149,8 @@
                         <span class="slider round"></span>
                     </span>
                 </label>
-                <p class="switch-description"><em>Toggle between bolding the first 2 letters of each word (in large bodies of texts).</em></p>
+                <p class="switch-description"><em>Toggle between bolding the first 2 letters of each word (in large
+                        bodies of texts).</em></p>
             </div>
 
             <div class="menu-content">
@@ -175,7 +177,7 @@
             <section id="home">
                 <section id="intro" class="content-box">
                     <h1 class="title">Joshua Thomas</h1>
-                    <div>
+                    <div id="typed">
                         <p id="typing-text"></p>
                     </div>
                     <a class="button" id="intro-btn" href="#about">Read More</a>
@@ -196,8 +198,12 @@
                             C++.
                         </p>
 
-                        <img class="github-stats" id="profile-stats" src="https://raw.githubusercontent.com/joshuathomas22/github-stats/master/generated/overview.svg#gh-dark-mode-only" alt="Github Profile Statistics" title="Github Profile Statistics">
-                        <img class="github-stats" id="language-stats" src="https://raw.githubusercontent.com/joshuathomas22/github-stats/master/generated/languages.svg#gh-dark-mode-only" alt="Programming languages usage" title="Programming languages usage">
+                        <img class="github-stats" id="profile-stats"
+                            src="https://raw.githubusercontent.com/joshuathomas22/github-stats/master/generated/overview.svg#gh-dark-mode-only"
+                            alt="Github Profile Statistics" title="Github Profile Statistics">
+                        <img class="github-stats" id="language-stats"
+                            src="https://raw.githubusercontent.com/joshuathomas22/github-stats/master/generated/languages.svg#gh-dark-mode-only"
+                            alt="Programming languages usage" title="Programming languages usage">
 
                     </section>
 
@@ -327,7 +333,6 @@
     <footer>
         <strong>&copy; 2023 Joshua Thomas. All rights reserved.</strong>
     </footer>
-
 
 </body>
 

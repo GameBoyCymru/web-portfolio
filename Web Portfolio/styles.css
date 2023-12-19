@@ -395,13 +395,13 @@ main {
     background: none;
 }
 
-#typing-text {
-    display: flex;
-    padding: var(--small);
-    align-items: center;
-    font-size: 1em;
+#typed {
     height: 3em;
+}
 
+#typing-text {
+    display: inline-block;
+    font-size: 1em;
 }
 
 .title {
