@@ -47,7 +47,7 @@ html {
 }
 
 /* Handle */
-::-webkit-scrollbar-thumb { 
+::-webkit-scrollbar-thumb {
     background: #8d8d8d;
     border-radius: 25px;
     border: none;
@@ -270,7 +270,7 @@ header {
     display: flex;
     align-items: center;
     gap: 8px;
-    justify-content:space-between;
+    justify-content: space-between;
 }
 
 .menu-content {
@@ -401,7 +401,7 @@ main {
     align-items: center;
     font-size: 1em;
     height: 3em;
-    
+
 }
 
 .title {
@@ -424,7 +424,7 @@ main {
 #pfp {
     /* zoom into the image to make it a circle */
     width: 50%;
-    object-fit:contain;
+    object-fit: contain;
     border-radius: 20%;
     margin: 0 auto;
 }
@@ -515,7 +515,6 @@ main {
     grid-template-columns: repeat(1, 1fr);
     gap: var(--small);
     padding: var(--small) 0;
-
 }
 
 .project {
@@ -523,6 +522,8 @@ main {
     flex-direction: column;
     padding: var(--small);
     justify-content: space-between;
+    border-radius: var(--small);
+
 }
 
 .project-list {
@@ -539,7 +540,7 @@ main {
     align-self: center;
 }
 
-.github-stats{
+.github-stats {
     align-items: center;
     width: 100%;
     height: auto;
@@ -583,7 +584,7 @@ footer {
         justify-items: center;
     }
 
-    .github-stats{
+    .github-stats {
         max-width: 80%;
     }
 }
@@ -595,18 +596,22 @@ footer {
         --large: 50px;
     }
 
-    header{
+    header {
         display: flex;
     }
 
-   
+    .project {
+        background-color: var(--background);
+        border: solid 2px white;
+    }
+
 
 }
 
 /*  Small laptops   */
 @media screen and (min-width:900px) {
-    
-    .github-stats{
+
+    .github-stats {
         max-width: 60%;
     }
 }
@@ -618,8 +623,13 @@ footer {
         font-size: 1.4em;
     }
 
+    .quick-nav,
+    .quick-settings {
+        max-width: 500px;
+    }
+
     main {
-        grid-template-areas: 
+        grid-template-areas:
             "intro intro intro"
             "about about contact"
             "about about experience"
@@ -640,13 +650,9 @@ footer {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .project {
-        background-color: var(--background);
-        border: none;
-        border-radius: var(--small);
-    }
+    
 
-    .github-stats{
+    .github-stats {
         max-width: 100%;
     }
 
