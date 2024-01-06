@@ -576,7 +576,7 @@ footer {
 
 /*  Larger Mobile Devices   */
 @media screen and (min-width:425px) {
-    main {
+    body {
         font-size: 1.1em;
     }
 
@@ -612,6 +612,10 @@ footer {
 /*  Small laptops   */
 @media screen and (min-width:900px) {
 
+    body {
+        font-size: 1.2em;
+    }
+
     .github-stats {
         max-width: 60%;
     }
@@ -619,10 +623,6 @@ footer {
 
 /*  Desktops and laptops   */
 @media screen and (min-width:1024px) {
-
-    body {
-        font-size: 1em;
-    }
 
     .quick-nav,
     .quick-settings {
@@ -655,4 +655,30 @@ footer {
         max-width: 100%;
     }
 
+}
+
+/*  Large Desktops and laptops   */
+
+@media screen and (min-width:1280px) {
+    :root {
+        --small: 20px;
+        --large: 60px;
+    }
+
+    body {
+        font-size: 1.4em;
+    }
+
+    main {
+        max-width: 1200px;
+    }
+
+    .quick-nav,
+    .quick-settings {
+        max-width: 600px;
+    }
+
+    .github-stats {
+        max-width: 100%;
+    }
 }
