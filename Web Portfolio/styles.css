@@ -471,14 +471,14 @@ main {
     border: solid var(--primary-text);
 
     background-color: rgba(0, 0, 0, 0.5);
+    transition-duration: 0.5s;
+    transition: all 0.2s ease-in-out;
 
-    /* transition-property: outline-offset, outline-color, background-color; */
-    transition-duration: 1s;
 }
 
 .logo-icon:is(:hover, :focus) {
-    animation: SocialSpin 1s ease 0s 1 normal forwards;
-}
+    border-radius: 50%;
+}                       
 
 .instagram:is(:hover, :focus) {
     background-image: radial-gradient(circle at 30% 107%,
@@ -487,6 +487,8 @@ main {
             #fd5949 45%,
             #d6249f 60%,
             #285aeb 90%);
+    ;
+
 }
 
 .linkedin:is(:hover, :focus) {
@@ -553,21 +555,6 @@ footer {
     text-align: center;
     padding: var(--small);
 }
-
-
-
-/* CSS to spin the social media logo-icons 360 degrees */
-@keyframes SocialSpin {
-    0% {
-        transform: rotate(0);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-/* .............................................. */
 
 
 
