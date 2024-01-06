@@ -337,6 +337,13 @@ header {
     background-color: var(--overlay);
 }
 
+
+
+/* -------------------------------------------------- */
+
+
+
+
 /* Styling for the main content - aimed for small mobile devices */
 main {
     margin: 0 auto;
@@ -352,7 +359,7 @@ main {
     gap: var(--large);
     box-sizing: content-box;
     /* Prevents the content from overflowing */
-    max-width: 1200px;
+    max-width: 900px;
 }
 
 .content-box {
@@ -435,18 +442,14 @@ main {
     flex-direction: column;
     gap: var(--small);
     align-items: center;
-
+    text-wrap: balance;
+    text-align: center;
 }
 
 #experience {
     display: none;
 }
 
-.experience-section {
-    display: flex;
-    flex-direction: column;
-    gap: var(--small);
-}
 
 /* .............................................. */
 
@@ -511,6 +514,12 @@ main {
 }
 
 
+.work-info, .education-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--small);
+    padding: 2px 0 var(--small) var(--small) ; 
+}
 
 .project-section {
     display: grid;
@@ -526,6 +535,11 @@ main {
     justify-content: space-between;
     border-radius: var(--small);
 
+}
+
+.experience-list, .project-list {
+    padding: 0 var(--small);
+    gap: var(--small);
 }
 
 .project-list {
@@ -607,7 +621,7 @@ footer {
 @media screen and (min-width:1024px) {
 
     body {
-        font-size: 1.4em;
+        font-size: 1em;
     }
 
     .quick-nav,
@@ -636,8 +650,6 @@ footer {
     .project-section {
         grid-template-columns: repeat(3, 1fr);
     }
-
-    
 
     .github-stats {
         max-width: 100%;
