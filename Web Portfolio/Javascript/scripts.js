@@ -36,8 +36,34 @@ function setFontStyle() {
   if (storedCheckboxState) {
     boldTextCheckbox.checked = storedCheckboxState === 'true';
     // Apply the bold text styling based on the checkbox state
-    toggleBoldText();
+    applyBoldText();
   }
+}
+
+// Function to apply bold text styling
+function applyBoldText() {
+  // Get all the paragraph elements on the page
+  const paragraphs = document.querySelectorAll('p');
+
+  // Iterate through each paragraph element
+  paragraphs.forEach(paragraph => {
+    // Split the text into words
+    const words = paragraph.textContent.split(' ');
+
+    // Iterate through each word and toggle bold styling for the first two letters
+    const formattedWords = words.map(word => {
+      if (word.length >= 2) {
+        return isBold ? `<b>${word.substring(0, 2)}</b>${word.substring(2)}` : word;
+      }
+      return word;
+    });
+
+    // Join the formatted words back into a string
+    const formattedText = formattedWords.join(' ');
+
+    // Set the inner HTML of the paragraph with the formatted text
+    paragraph.innerHTML = formattedText;
+  });
 }
 
 // Function to toggle bold text and change the font
@@ -48,7 +74,13 @@ function toggleBoldText() {
   // Read the current checkbox state
   const checkboxState = boldTextCheckbox.checked;
 
-  // Change the font of the entire page
+  // Update the isBold variable
+  isBold = checkboxState;
+
+  // Apply the bold text styling based on the checkbox state
+  applyBoldText();
+
+  // Change the font of the entire page only if the checkbox is checked
   const body = document.body;
   body.style.fontFamily = checkboxState ? 'Comic Sans MS' : 'Poppins';
 
