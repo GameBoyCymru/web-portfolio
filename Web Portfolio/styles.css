@@ -137,8 +137,7 @@ header {
     z-index: 10;
     display: flex;
     align-items: center;
-    box-shadow:
-        rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 
@@ -182,8 +181,7 @@ header {
     max-width: 320px;
     width: 100%;
     position: fixed;
-    box-shadow:
-        rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     animation: fadeInAnimation ease-in-out 0.5s forwards;
     z-index: 10;
     gap: var(--small);
@@ -317,11 +315,11 @@ header {
     transition: .4s;
 }
 
-.switch input:checked+.slider {
+.switch input:checked + .slider {
     background-color: var(--secondary);
 }
 
-.switch input:checked+.slider:before {
+.switch input:checked + .slider:before {
     transform: translateX(26px);
 }
 
@@ -339,10 +337,7 @@ header {
 }
 
 
-
 /* -------------------------------------------------- */
-
-
 
 
 /* Styling for the main content - aimed for small mobile devices */
@@ -452,8 +447,7 @@ main {
 #experience,
 .about-section,
 #about,
-#intro
-{
+#intro {
     display: flex;
     flex-direction: column;
 }
@@ -484,7 +478,7 @@ main {
 
 .logo-icon:is(:hover, :focus) {
     border-radius: 50%;
-}                       
+}
 
 
 .linkedin:is(:hover, :focus) {
@@ -567,11 +561,10 @@ footer {
 }
 
 
-
 /* Media Queries for device responsiveness */
 
 /*  Larger Mobile Devices   */
-@media screen and (min-width:425px) {
+@media screen and (min-width: 425px) {
     body {
         font-size: 1.1em;
     }
@@ -587,7 +580,7 @@ footer {
 }
 
 /*  Tablets   */
-@media screen and (min-width:720px) {
+@media screen and (min-width: 720px) {
     :root {
         --small: 18px;
         --large: 50px;
@@ -598,7 +591,7 @@ footer {
     }
 
     .info-box {
-    border: white 2px solid;
+        border: white 2px solid;
 
     }
 
@@ -611,7 +604,7 @@ footer {
 }
 
 /*  Small laptops   */
-@media screen and (min-width:900px) {
+@media screen and (min-width: 900px) {
 
     body {
         font-size: 1.2em;
@@ -625,7 +618,7 @@ footer {
 }
 
 /*  Desktops and laptops   */
-@media screen and (min-width:1024px) {
+@media screen and (min-width: 1024px) {
 
     .quick-nav,
     .quick-settings {
@@ -659,7 +652,7 @@ footer {
 
 /*  Large Desktops and laptops   */
 
-@media screen and (min-width:1280px) {
+@media screen and (min-width: 1280px) {
     :root {
         --small: 20px;
         --large: 60px;

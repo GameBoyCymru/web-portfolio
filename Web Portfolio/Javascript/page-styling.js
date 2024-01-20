@@ -1,5 +1,3 @@
-
-
 // Function to toggle dark mode
 function toggleDarkMode() {
     // Get the checkbox for dark mode
@@ -30,8 +28,7 @@ function toggleDarkMode() {
         if (solidColoursCheckbox.checked) {
             document.documentElement.style.setProperty('--background', 'rgba(6, 5, 20, 1)');
             document.documentElement.style.setProperty('--nav-background', 'rgb(6 5 20 / 1)');
-        }
-        else {
+        } else {
             document.documentElement.style.setProperty('--background', 'rgba(6, 5, 20, 0.8)');
             document.documentElement.style.setProperty('--nav-background', 'rgb(6 5 20 / 0.8)');
         }
@@ -50,9 +47,7 @@ function toggleDarkMode() {
         if (solidColoursCheckbox.checked) {
             document.documentElement.style.setProperty('--background', 'rgba(6, 5, 20, 1)');
             document.documentElement.style.setProperty('--nav-background', 'rgb(234 233 253 / 1)');
-        }
-
-        else {
+        } else {
             document.documentElement.style.setProperty('--background', 'rgba(6, 5, 20, 0.8)');
             document.documentElement.style.setProperty('--nav-background', 'rgb(234 233 253 / 0.8)');
         }
@@ -85,11 +80,9 @@ if (savedDarkModePreference !== null) {
 toggleDarkMode();
 
 
-
 /*
 ------------------------------------------------------------
 */
-
 
 
 // Function to toggle solid colours
@@ -124,7 +117,6 @@ function toggleSolidColours() {
 
     // Update the nav background
     document.documentElement.style.setProperty('--nav-background', navBackgroundColor);
-
 
 
     // Save the user's preference in local storage
