@@ -4,6 +4,7 @@
 
 :root {
     --small: 10px;
+    --medium: 20px;
     --large: 40px;
     line-height: 1.4;
 
@@ -353,6 +354,7 @@ main {
     grid-template-areas:
         "intro"
         "about"
+        "experience"
         "projects"
         "contact";
     /* Setting grid to 1 column by default */
@@ -381,6 +383,7 @@ main {
 
 #about {
     grid-area: about;
+    border: 2px solid var(--primary);
 }
 
 #projects {
@@ -421,8 +424,8 @@ main {
 /* .............................................. */
 
 .about-section {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    display: flex;
+    flex-direction: column;
     gap: var(--small);
 }
 
@@ -447,7 +450,8 @@ main {
 }
 
 #experience {
-    display: none;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -513,17 +517,27 @@ main {
     filter: invert(100%) sepia(0%) saturate(1513%) hue-rotate(233deg) brightness(107%) contrast(101%);
 }
 
+.info-box {
+    padding: var(--small);
+    border-radius: var(--small);
+}
+
+.info-box:is(:hover, :focus) {
+    background-color: var(--secondary);
+    cursor: pointer;
+}
 
 .work-info, .education-info {
     display: flex;
     flex-direction: column;
     gap: var(--small);
-    padding: 2px 0 var(--small) var(--small) ; 
+    padding: var(--small) 0;
+    flex-grow: 1;
 }
 
 .project-section {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    display: flex;
+    flex-direction: column;
     gap: var(--small);
     padding: var(--small) 0;
 }
@@ -601,6 +615,11 @@ footer {
         display: flex;
     }
 
+    .info-box {
+    border: white 2px solid;
+
+    }
+
     .project {
         background-color: var(--background);
         border: solid 2px white;
@@ -619,6 +638,8 @@ footer {
     .github-stats {
         max-width: 60%;
     }
+
+
 }
 
 /*  Desktops and laptops   */
@@ -643,11 +664,8 @@ footer {
         display: none;
     }
 
-    #experience {
-        display: block;
-    }
-
     .project-section {
+        display: grid;
         grid-template-columns: repeat(3, 1fr);
     }
 
