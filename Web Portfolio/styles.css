@@ -384,8 +384,6 @@ main {
 #about {
     grid-area: about;
     border: 4px solid var(--primary);
-    display: flex;
-    flex-direction: column;
 }
 
 #projects {
@@ -399,9 +397,6 @@ main {
 
 
 #intro {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: 1fr min-content min-content;
     justify-items: center;
     gap: var(--small);
     background: none;
@@ -426,8 +421,6 @@ main {
 /* .............................................. */
 
 .about-section {
-    display: flex;
-    flex-direction: column;
     gap: var(--small);
 }
 
@@ -447,15 +440,23 @@ main {
     flex-direction: column;
     gap: var(--small);
     align-items: center;
-    text-wrap: balance;
     text-align: center;
 }
 
-#experience {
+
+.work-info,
+.education-info,
+.project-section,
+.project,
+.project-list,
+#experience,
+.about-section,
+#about,
+#intro
+{
     display: flex;
     flex-direction: column;
 }
-
 
 /* .............................................. */
 
@@ -475,7 +476,6 @@ main {
     height: 60px;
     border-radius: 20%;
     border: solid var(--primary-text);
-
     background-color: rgba(0, 0, 0, 0.5);
     transition-duration: 0.5s;
     transition: all 0.2s ease-in-out;
@@ -516,24 +516,19 @@ main {
     cursor: pointer;
 }
 
+
 .work-info, .education-info {
-    display: flex;
-    flex-direction: column;
     gap: var(--small);
     padding: var(--small) 0;
     flex-grow: 1;
 }
 
 .project-section {
-    display: flex;
-    flex-direction: column;
     gap: var(--small);
     padding: var(--small) 0;
 }
 
 .project {
-    display: flex;
-    flex-direction: column;
     padding: var(--small);
     justify-content: space-between;
     border-radius: var(--small);
@@ -547,8 +542,6 @@ main {
 
 .project-list {
     padding: var(--small);
-    display: flex;
-    flex-direction: column;
     gap: var(--small);
     flex: 1;
 }
