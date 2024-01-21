@@ -1,60 +1,41 @@
+# Web Portfolio
 
-<div id="header" align="center">
-  <img src="https://media.giphy.com/media/jdPMeyv9rn0hZHh8n9/giphy.gif" width="100"/>
+Welcome to my web portfolio repository! This project serves as my online portfolio, showcasing my skills and projects. Below, you'll find an overview of the project structure, the technologies used, and instructions on how to set it up locally.
 
+## Table of Contents
 
-<div id="badges">
-  <a href="https://www.linkedin.com/in/joshuathomas-dev/">
-    <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
-  </a>
-  
-  <!--
-  <a href="https://www.youtube.com/channel/UCCTnOo3TmTYjGByLsMBxt7w">
-    <img src="https://img.shields.io/badge/YouTube-red?style=for-the-badge&logo=youtube&logoColor=white" alt="Youtube Badge"/>
-  </a>
-  <a href="your-twitter-URL">
-    <img src="https://img.shields.io/badge/Twitter-blue?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter Badge"/>
-  </a>
-  -->
-  
-</div>
-</div>
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Usage](#usage)
 
-<h1 align="center">Hi there, I'm Joshua Thomas! 👋
-<p align="center"> <img src="https://komarev.com/ghpvc/?username=joshuathomas22&label=Profile%20views&color=0e75b6&style=flat" alt="joshuathomas22" /> </p></h1>
+## Project Overview
 
+This web portfolio is built using HTML, CSS, and JavaScript. It includes a responsive navigation bar with buttons for menu and settings, as well as quick navigation and quick settings sidebars. The main content section features different sections for About, Projects, and Contact.
 
-## About Me.
-- 👨‍💻 I'm a 19-year-old undergraduate.
-- 🎓 Currently studying Cybersecurity to enhance my skills and contribute to a safer digital world.
-- 💻 My primary coding language is C++, but I also enjoy working with HTML, CSS, and JavaScript for web development projects.
+### Technologies Used
 
-## 🔧 Technologies & Statistics
-<div>
-<img src="https://raw.githubusercontent.com/joshuathomas22/github-stats/master/generated/overview.svg#gh-dark-mode-only"/>
-<img src="https://raw.githubusercontent.com/joshuathomas22/github-stats/master/generated/languages.svg#gh-dark-mode-only"/>
-</div>
+- **HTML**: Used for structuring the content of the web pages.
+- **CSS**: Stylesheets for layout, styling, and animations.
+- **JavaScript**: Provides interactivity, handles navigation, and implements dynamic features.
+- **Google Fonts**: Utilized the Poppins font for a modern and clean look.
 
- <!--
- ![C++](https://img.shields.io/badge/-C++-00599C?style=flat&logo=c%2B%2B&logoColor=white)
-![HTML](https://img.shields.io/badge/-HTML-E34F26?style=flat&logo=html5&logoColor=white)
-![CSS](https://img.shields.io/badge/-CSS-1572B6?style=flat&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
--->
+## Features
 
-## 🚀 My Projects
-- 🌐 [Project 1](#) - Short description of Project 1.
-- 📱 [Project 2](#) - Brief overview of Project 2.
-- 🔒 [Project 3](#) - Description of Project 3.
+- **Responsive Design**: Ensures a seamless experience across various devices.
+- **Dynamic Navigation**: Navigate through different sections with smooth transitions.
+- **Quick Menus**: Access quick navigation and settings for a user-friendly experience.
+- **Dark Mode**: Toggle between light and dark mode for personalized viewing.
+- **Experimental Reading Mode**: Bold the first two letters of each word ( may help some people read long bodies of text easier ).
+- **Accessibility Mode**: Replaces transparency effects with solid colours for easier reading.
 
 
+## Usage
+```
+1. Open the index.html file in your preferred web browser.
 
+2. Explore different sections such as About, Projects, and Contact using the navigation bar.
 
-## 📚 Education
-- Current: Bath Spa University.
-- Previous: Ysgol Garth Olwg.
+3. Click on the menu button to access the quick navigation sidebar.
 
-## 📫 Get in Touch
-- LinkedIn: <a href="https://www.linkedin.com/in/joshuathomas-dev/"> joshuathomas-dev
-  
-Feel free to explore my repositories and collaborate on exciting projects! 😄
+4. Click on the settings button to access the quick settings sidebar, where you can toggle dark mode and bold text.
+```
