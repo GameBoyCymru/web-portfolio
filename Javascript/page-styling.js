@@ -11,7 +11,6 @@ function toggleDarkMode() {
     // Update the source of the GitHub stats images
     const profileStatsImage = document.getElementById('profile-stats');
     const languageStatsImage = document.getElementById('language-stats');
-    profileStatsImage.src = `https://raw.githubusercontent.com/joshuathomas22/github-stats/master/generated/overview.svg#gh-${theme}-mode-only`;
     languageStatsImage.src = `https://raw.githubusercontent.com/joshuathomas22/github-stats/master/generated/languages.svg#gh-${theme}-mode-only`;
 
 
