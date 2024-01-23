@@ -85,7 +85,11 @@ body::before {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: rockwell;
+    font-family: rockwell, sans-serif, Arial;
+}
+
+li {
+   margin-left: var(--medium);
 }
 
 button {
@@ -503,6 +507,7 @@ main {
 .info-box {
     padding: var(--small);
     border-radius: var(--small);
+    background-color: var(--background);
 }
 
 .info-box:is(:hover, :focus) {
@@ -526,19 +531,17 @@ main {
     padding: var(--small);
     justify-content: space-between;
     border-radius: var(--small);
+    background-color: var(--background);
 
 }
 
 .experience-list, .project-list {
-    padding: 0 var(--small);
-    gap: var(--small);
-}
-
-.project-list {
-    padding: var(--small);
+    padding: var(--small) 0 var(--small) 0;
     gap: var(--small);
     flex: 1;
 }
+
+
 
 .git-link {
     text-decoration: underline var(--primary);
@@ -596,7 +599,6 @@ footer {
     }
 
     .project {
-        background-color: var(--background);
         border: solid 2px white;
     }
 
