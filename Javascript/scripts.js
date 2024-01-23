@@ -1,7 +1,8 @@
 // Typing Text using the Typed.js library
 
 var typed = new Typed('#typing-text', {
-    strings: ['Teaching Assistant.', 'Childcare Assistant.', 'C++ Programmer.', 'Web Developer.', 'Gamer.', 'Cyber Security Student.'],
+    strings: ['Teaching Assistant.', 'Childcare Assistant.', 'C++ Programmer.',
+        'Web Developer.', 'Gamer.', 'Cyber Security Student.'],
     typeSpeed: 50,
     backSpeed: 30,
     backDelay: 2000,
@@ -57,11 +58,8 @@ function applyBoldText() {
             return word;
         });
 
-        // Join the formatted words back into a string
-        const formattedText = formattedWords.join(' ');
-
         // Set the inner HTML of the paragraph with the formatted text
-        paragraph.innerHTML = formattedText;
+        paragraph.innerHTML = formattedWords.join(' ');
     });
 }
 
