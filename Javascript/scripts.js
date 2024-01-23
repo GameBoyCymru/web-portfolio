@@ -42,13 +42,13 @@ function setFontStyle() {
 
 // Function to apply bold text styling
 function applyBoldText() {
-    // Get all the paragraph elements on the page
-    const paragraphs = document.querySelectorAll('p');
+    // Get all the paragraph and list elements on the page
+    const elements = document.querySelectorAll('p, li');
 
-    // Iterate through each paragraph element
-    paragraphs.forEach(paragraph => {
+    // Iterate through each element
+    elements.forEach(element => {
         // Split the text into words
-        const words = paragraph.textContent.split(' ');
+        const words = element.textContent.split(' ');
 
         // Iterate through each word and toggle bold styling for the first two letters
         const formattedWords = words.map(word => {
@@ -58,8 +58,8 @@ function applyBoldText() {
             return word;
         });
 
-        // Set the inner HTML of the paragraph with the formatted text
-        paragraph.innerHTML = formattedWords.join(' ');
+        // Set the inner HTML of the element with the formatted text
+        element.innerHTML = formattedWords.join(' ');
     });
 }
 
