@@ -79,10 +79,10 @@ function toggleBoldText() {
 
     // Change the font of the entire page only if the checkbox is checked
     const body = document.body;
-    body.style.fontFamily = checkboxState ? 'Comic Sans MS' : 'Poppins';
+    body.style.fontFamily = checkboxState ? 'Comic Sans' : 'Poppins';
 
     // Save the font preference to localStorage
-    localStorage.setItem('fontPreference', checkboxState ? 'Comic Sans MS' : 'Poppins');
+    localStorage.setItem('fontPreference', checkboxState ? 'Comic Sans' : 'Poppins');
 
     // Save the checkbox state to localStorage
     localStorage.setItem('checkboxState', checkboxState);

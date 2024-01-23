@@ -1,6 +1,14 @@
+/* Imports the Poppins font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
-/* Imports Google Font Poppins */
+/*Imports the Comic Sans font so all devices can use it*/
+@font-face {
+    font-family: 'Comic Sans';
+    src: url("./Fonts/ComicSansMS3.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 :root {
     --small: 10px;
