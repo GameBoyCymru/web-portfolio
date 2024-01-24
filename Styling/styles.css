@@ -4,7 +4,7 @@
 /*Imports the Comic Sans font so all devices can use it*/
 @font-face {
     font-family: 'Comic Sans';
-    src: url("./Fonts/ComicSansMS3.ttf");
+    src: url("../Fonts/ComicSansMS3.ttf");
     font-weight: normal;
     font-style: normal;
 }
@@ -19,7 +19,7 @@
     --primary: #a39be3;
     --secondary: #7a2268;
     --background: rgba(6, 5, 20, 0.8);
-    --background-image: url("./Backgrounds/island-dark.webp");
+    --background-image: url("../Backgrounds/island-dark.webp");
     --overlay: rgba(6, 5, 20, 0.4);
 
 
@@ -644,11 +644,6 @@ footer {
         gap: var(--large);
     }
 
-    .work,
-    .education {
-        display: none;
-    }
-
     .project-section {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -679,9 +674,5 @@ footer {
     .quick-nav,
     .quick-settings {
         max-width: 600px;
-    }
-
-    .github-stats {
-        max-width: 100%;
     }
 }

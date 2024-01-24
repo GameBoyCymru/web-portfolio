@@ -18,7 +18,7 @@ function toggleDarkMode() {
     if (darkModeCheckbox.checked) {
         document.documentElement.style.setProperty('--primary', '#a39be3');
         document.documentElement.style.setProperty('--secondary', '#7a2268');
-        document.documentElement.style.setProperty('--background-image', 'url("./Backgrounds/island-dark.webp")');
+        document.documentElement.style.setProperty('--background-image', 'url("../Backgrounds/island-dark.webp")');
         document.documentElement.style.setProperty('--primary-text', '#e7e6f7');
         document.documentElement.style.setProperty('--secondary-text', '#131B23');
         document.documentElement.style.setProperty('--nav-text', '#e7e6f7');
@@ -37,7 +37,7 @@ function toggleDarkMode() {
         // Apply light mode if the checkbox is unchecked
         document.documentElement.style.setProperty('--primary', '#8fffbc');
         document.documentElement.style.setProperty('--secondary', '#a39be3');
-        document.documentElement.style.setProperty('--background-image', 'url("./Backgrounds/island-light.webp")');
+        document.documentElement.style.setProperty('--background-image', 'url("../Backgrounds/island-light.webp")');
         document.documentElement.style.setProperty('--primary-text', '#e7e6f7');
         document.documentElement.style.setProperty('--secondary-text', '#131B23');
         document.documentElement.style.setProperty('--nav-text', '#131B23');
