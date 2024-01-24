@@ -135,7 +135,6 @@ html {
     scroll-behavior: smooth;
     /* smooth scrolling */
     scroll-padding-top: 100px;
-    /* height of the navbar */
 }
 
 header {
@@ -434,7 +433,6 @@ main {
 
 /* CSS for the Profile Picture */
 #pfp {
-    /* zoom into the image to make it a circle */
     width: 50%;
     object-fit: contain;
     border-radius: 20%;
@@ -518,9 +516,11 @@ main {
     background-color: var(--background);
 }
 
-.info-box:is(:hover, :focus) {
-    background-color: var(--secondary);
-    cursor: pointer;
+.info-box:is(:hover, :focus),
+.project:is(:hover, :focus)
+{
+    border: var(--secondary) 2px solid;
+    transform: scale(1.045);
 }
 
 

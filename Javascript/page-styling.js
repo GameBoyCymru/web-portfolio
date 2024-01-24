@@ -43,6 +43,7 @@ function toggleDarkMode() {
         document.documentElement.style.setProperty('--nav-text', '#131B23');
         document.documentElement.style.setProperty('--exit-filter', 'invert(8%) sepia(14%) saturate(1423%) hue-rotate(169deg) brightness(94%) contrast(94%)');
 
+        // Apply solid colours if the checkbox is checked
         if (solidColoursCheckbox.checked) {
             document.documentElement.style.setProperty('--background', 'rgba(6, 5, 20, 1)');
             document.documentElement.style.setProperty('--nav-background', 'rgb(234 233 253 / 1)');
@@ -71,11 +72,11 @@ if (savedDarkModePreference !== null) {
     darkModeCheckbox.checked = savedDarkModePreference === 'true';
     toggleDarkMode(); // Update colors based on the saved preference
 } else {
-    // If no preference is saved, use the system preference
+    // If no preference is saved, use the system theme
     darkModeCheckbox.checked = window.matchMedia('(prefers-color-scheme: dark)').matches;
 }
 
-// Initial call to toggleDarkMode to set initial color scheme
+
 toggleDarkMode();
 
 
