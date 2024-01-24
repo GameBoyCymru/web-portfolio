@@ -153,20 +153,24 @@ document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll("section.content-box");
     const screenTitle = document.querySelector(".screen-title");
 
+    // Function to update the screen title based on the active section
     function updateScreenTitle() {
         let maxVisibleArea = 0;
         let activeSection = null;
 
+        // Iterate through each section and calculate the visible area
         sections.forEach(section => {
             const rect = section.getBoundingClientRect();
             const visibleArea = Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0);
 
+            // Update the active section if the visible area is greater than the current max visible area
             if (visibleArea > maxVisibleArea) {
                 maxVisibleArea = visibleArea;
                 activeSection = section;
             }
         });
 
+        // Update the screen title based on the active section title
         if (activeSection) {
             if (activeSection.id === "intro") {
                 screenTitle.textContent = "Home";
