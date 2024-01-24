@@ -45,12 +45,11 @@ Sets the default values for all the variables on the page
     --exit-filter: invert(100%) sepia(0%) saturate(1513%) hue-rotate(233deg) brightness(107%) contrast(101%);
 }
 
-/* Removing default spacing and adding a default transition*/
+/* Removing default spacing */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    transition: all 0.2s ease-in-out;
 }
 
 html {
@@ -153,6 +152,7 @@ a:is(:hover, :focus) {
     background-color: var(--primary);
     color: var(--secondary-text);
     font-weight: bold;
+    transition: all 0.2s ease-in-out;
 }
 
 /* Hover and Focus effects for the button elements*/
@@ -166,6 +166,7 @@ a:is(:hover, :focus) {
 /* Styles the buttons to increase in size when focused/hovered */
 button:is(:hover, :focus) {
     transform: scale(1.3);
+    transition: all 0.2s ease-in-out;
 }
 
 html {
@@ -188,6 +189,221 @@ header {
     align-items: center;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
+
+/* Styling for the title/navigation bar at the top of the page */
+.navigation-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 6px;
+}
+
+/* Styling for the icons in the navigation menus */
+.icon {
+    width: 48px;
+    height: 48px;
+    padding: 6px;
+    transition: all 0.2s ease-in-out;
+    border-radius: 50%;
+}
+
+/* Sets the colour for the exit icons in the menus */
+.exit {
+    filter: var(--exit-filter);
+}
+
+/* Sets the colour for the exit icons in the menus if they are focused or hovered */
+.exit:is(:hover, :focus) {
+    filter: invert(19%) sepia(81%) saturate(6752%) hue-rotate(357deg) brightness(106%) contrast(123%);
+}
+
+/* Styling for the containers of the menus */
+.quick-nav,
+.quick-settings {
+    top: 0;
+    background-color: var(--nav-background);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+    width: 100%;
+    position: fixed;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    animation: fadeInAnimation ease-in-out 0.5s forwards;
+    z-index: 10;
+    gap: var(--small);
+    color: var(--nav-text);
+    backdrop-filter: blur(10px);
+}
+
+/*  */
+.nav-link {
+    color: var(--nav-text);
+}
+
+/* Ensures the page navigation menu starts at the left side of the screen */
+.quick-nav {
+    left: 0;
+}
+
+/* Ensures the settings menu starts at the right side of the screen */
+.quick-settings {
+    right: 0;
+}
+
+/* Styles the content of the menus */
+.quick-nav-content,
+.quick-settings-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--large);
+    padding: var(--small);
+}
+
+/* Styles the navigation menu to be easier to read */
+.quick-nav-content {
+    font-size: 1.6em;
+    padding-left: var(--large);
+}
+
+/* Styles the headings for the menus */
+.quick-nav-headline,
+.quick-settings-headline {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80px;
+    padding: var(--small);
+    background-color: var(--nav-background);
+}
+
+/* ----------------------------------------------------------- */
+
+/* Classes to dictate the state of the menus */
+
+.none {
+    display: none;
+}
+
+.hide {
+    opacity: 0;
+    visibility: hidden;
+    animation: fadeOutAnimation ease-in-out 0.5s forwards;
+}
+
+/* ------------------------------------------------------------ */
+
+/* The animation for the menus opening and closing */
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        width: 0px;
+    }
+
+    100% {
+        opacity: 1;
+        visibility: visible;
+        width: 350px;
+    }
+}
+
+
+@keyframes fadeOutAnimation {
+    0% {
+        opacity: 1;
+        width: 350px;
+        visibility: visible;
+    }
+
+    100% {
+        opacity: 0;
+        width: 0px;
+        visibility: hidden;
+    }
+}
+
+/* ------------------------------------------------------------ */
+
+.menu-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: space-between;
+}
+
+.menu-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--small);
+}
+
+
+.menu-label {
+    white-space: nowrap;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+/* ------------------------------------------------------------ */
+
+/* Styling to control all of the toggles */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background-color: var(--secondary-text);
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+}
+
+.switch input:checked + .slider {
+    background-color: var(--secondary);
+}
+
+.switch input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* -------------------------------------------------- */
+
 
 /* Styling for the main content - aimed for small mobile devices */
 main {
@@ -224,7 +440,7 @@ main {
 
 /* Adjusts the size of the main page title */
 .title {
-    font-size: 2em;
+    font-size: 2.3em;
     text-align: center;
     font-weight: bold;
 }
@@ -350,6 +566,8 @@ main {
     border-radius: 20%;
     border: solid var(--primary-text) 3px;
     background-color: rgba(0, 0, 0, 0.5);
+    transition: all 0.2s ease-in-out;
+
 }
 
 /* Makes the icons appear large and as circles if they are focused or hovered */
