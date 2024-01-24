@@ -86,7 +86,6 @@ body {
     font-size: 1em;
     color: var(--primary-text);
     background-color: var(--background);
-
 }
 
 /* Sets the image in the background with a blur effect */
@@ -103,9 +102,13 @@ body::before {
     background-size: cover;
     background-position: center;
     z-index: -1;
-    /* blur the background only */
     filter: blur(4px);
     -webkit-filter: blur(4px);
+}
+
+/* Styling for the overlay (makes the image in the background darker */
+#overlay {
+    background-color: var(--overlay);
 }
 
 /* ................................................. */
@@ -130,7 +133,7 @@ button {
     justify-content: center;
 }
 
-/* Sets the default styling for a link */
+/* Sets the default styling for a link to have no decoration and be the primary-text colour */
 a {
     text-decoration: none;
     color: var(--primary-text);
@@ -152,9 +155,18 @@ a:is(:hover, :focus) {
     transition: all 0.2s ease-in-out;
 }
 
+/* Hover and Focus effects for the button elements*/
 .button:is(:hover, :focus) {
     background-color: var(--secondary);
     color: var(--primary-text);
+    transform: scale(1.1);
+}
+
+
+/* Styles the buttons to increase in size when focused/hovered */
+button:is(:hover, :focus) {
+    transform: scale(1.3);
+    transition: all 0.2s ease-in-out;
 }
 
 html {
@@ -163,7 +175,7 @@ html {
     scroll-padding-top: 100px;
 }
 
-
+/* Styling for the header to stick at the top centre of the page */
 header {
     height: 80px;
     padding: 0 16px;
@@ -178,7 +190,7 @@ header {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-
+/* Styling for the title/navigation bar at the top of the page */
 .navigation-bar {
     display: flex;
     align-items: center;
@@ -187,7 +199,8 @@ header {
     gap: 6px;
 }
 
-.navigation-bar .icon {
+/* Styling for the icons in the navigation menus */
+.icon {
     width: 48px;
     height: 48px;
     padding: 6px;
@@ -195,20 +208,17 @@ header {
     border-radius: 50%;
 }
 
-
-.navigation-bar button:is(:hover, :focus) {
-    border-radius: 50%;
-    background-color: var(--primary-text);
-}
-
+/* Sets the colour for the exit icons in the menus */
 .exit {
     filter: var(--exit-filter);
 }
 
+/* Sets the colour for the exit icons in the menus if they are focused or hovered */
 .exit:is(:hover, :focus) {
     filter: invert(19%) sepia(81%) saturate(6752%) hue-rotate(357deg) brightness(106%) contrast(123%);
 }
 
+/* Styling for the containers of the menus */
 .quick-nav,
 .quick-settings {
     top: 0;
@@ -227,18 +237,22 @@ header {
     backdrop-filter: blur(10px);
 }
 
+/*  */
 .nav-link {
     color: var(--nav-text);
 }
 
+/* Ensures the page navigation menu starts at the left side of the screen */
 .quick-nav {
     left: 0;
 }
 
+/* Ensures the settings menu starts at the right side of the screen */
 .quick-settings {
     right: 0;
 }
 
+/* Styles the content of the menus */
 .quick-nav-content,
 .quick-settings-content {
     display: flex;
@@ -247,11 +261,13 @@ header {
     padding: var(--small);
 }
 
+/* Styles the navigation menu to be easier to read */
 .quick-nav-content {
     font-size: 1.6em;
     padding-left: var(--large);
 }
 
+/* Styles the headings for the menus */
 .quick-nav-headline,
 .quick-settings-headline {
     display: flex;
@@ -263,6 +279,10 @@ header {
     background-color: var(--nav-background);
 }
 
+/* ----------------------------------------------------------- */
+
+/* Classes to dictate the state of the menus */
+
 .none {
     display: none;
 }
@@ -272,6 +292,10 @@ header {
     visibility: hidden;
     animation: fadeOutAnimation ease-in-out 0.5s forwards;
 }
+
+/* ------------------------------------------------------------ */
+
+/* The animation for the menus opening and closing */
 
 @keyframes fadeInAnimation {
     0% {
@@ -287,6 +311,7 @@ header {
     }
 }
 
+
 @keyframes fadeOutAnimation {
     0% {
         opacity: 1;
@@ -301,7 +326,8 @@ header {
     }
 }
 
-/* Switch button  */
+/* ------------------------------------------------------------ */
+
 .menu-wrapper {
     width: 100%;
     display: flex;
@@ -316,10 +342,16 @@ header {
     gap: var(--small);
 }
 
+
 .menu-label {
     white-space: nowrap;
     font-size: 1.3em;
+    font-weight: bold;
 }
+
+/* ------------------------------------------------------------ */
+
+/* Styling to control all of the toggles */
 
 .switch {
     position: relative;
@@ -370,11 +402,6 @@ header {
     border-radius: 50%;
 }
 
-#overlay {
-    background-color: var(--overlay);
-}
-
-
 /* -------------------------------------------------- */
 
 
@@ -390,21 +417,35 @@ main {
         "experience"
         "projects"
         "contact";
-    /* Setting grid to 1 column by default */
     gap: var(--large);
     box-sizing: content-box;
     /* Prevents the content from overflowing */
     max-width: 900px;
 }
 
+/* Styles the containers that contain all of the information on the page */
 .content-box {
     background-color: var(--background);
     border: none;
     border-radius: var(--small);
     padding: var(--small);
-    position: relative;
 }
 
+/* Removes the background colour from the container and adds a gap between objects*/
+#intro {
+    justify-items: center;
+    gap: var(--small);
+    background: none;
+}
+
+/* Adjusts the size of the main page title */
+.title {
+    font-size: 2.3em;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Sets the home section to the intro area and makes it take up the entire screen */
 #home {
     text-align: center;
     height: 100vh;
@@ -414,26 +455,33 @@ main {
     grid-area: intro;
 }
 
+/* Sets the about section to the about area while giving it a border */
 #about {
     grid-area: about;
     border: 4px solid var(--primary);
 }
 
+/* Sets the experience section to the experience area */
+#experience {
+    grid-area: experience;
+}
+
+/* Sets the projects section to the projects area */
 #projects {
     grid-area: projects;
 }
 
+/* Sets the contact section to the contact area */
 #contact {
     grid-area: contact;
     height: min-content;
 }
 
 
-#intro {
-    justify-items: center;
-    gap: var(--small);
-    background: none;
-}
+
+/* --------------------------------------------- */
+
+/* Styling for the typing animation */
 
 #typed {
     height: 3em;
@@ -444,22 +492,17 @@ main {
     font-size: 1em;
 }
 
-.title {
-    font-size: 2em;
-    text-align: center;
-    font-weight: bold;
-}
-
-
 /* .............................................. */
 
+
+/* Sets the spacing for the about section */
 .about-section {
     gap: var(--small);
     padding: var(--small) 0;
 }
 
 
-/* CSS for the Profile Picture */
+/* Sets the size of the profile picture image */
 #pfp {
     width: 50%;
     object-fit: contain;
@@ -467,21 +510,22 @@ main {
     margin: 0 auto;
 }
 
+/* Increases the size of profile picture if the user hovers or  */
 #pfp:is(:hover, :focus) {
     border: var(--secondary) 2px solid;
     transform: scale(1.1);
 }
 
-
+/* Centres the description to be in the centre of the container */
 .description {
-    display: flex;
-    flex-direction: column;
     gap: var(--small);
     align-items: center;
     text-align: center;
 }
 
 
+/* Applies a flex column to all of the following ID's and Classes */
+.description,
 .work-info,
 .education-info,
 .project-section,
@@ -499,6 +543,11 @@ main {
 
 
 /* CSS for the Social Media logo-icons */
+
+/* 
+    Styles the container of the social media icons
+    to display them in a row and to have a gap between them
+*/
 .logo-icons {
     display: flex;
     flex-direction: row;
@@ -507,37 +556,45 @@ main {
     justify-content: center;
 }
 
+/* 
+    Sets the size of the social media icons
+*/
 .logo-icon {
     display: flex;
     width: 60px;
     height: 60px;
     border-radius: 20%;
-    border: solid var(--primary-text);
+    border: solid var(--primary-text) 3px;
     background-color: rgba(0, 0, 0, 0.5);
-    transition-duration: 0.5s;
     transition: all 0.2s ease-in-out;
 
 }
 
-
+/* Makes the icons appear large and as circles if they are focused or hovered */
 .logo-icon:is(:hover, :focus) {
     border-radius: 50%;
     transform: scale(1.25);
 }
 
+/* --------------------------------------------------------- */
 
+
+/* Individual background colours for each social media icon */
 .linkedin:is(:hover, :focus) {
     background-color: #007ab9;
 }
 
 .email:is(:hover, :focus) {
-    background-color: #60c1f5;
+    background-color: #324974;
 }
 
 .github:is(:hover, :focus) {
     background-color: #985ef0;
 }
 
+/* ----------------------------------------------------------- */
+
+/* Sets the social media icons to white and to fit in the container */
 .iconImg {
     width: 75%;
     height: 75%;
@@ -550,13 +607,6 @@ main {
     border-radius: var(--small);
     background-color: var(--background);
 }
-
-.info-box:is(:hover, :focus),
-.project:is(:hover, :focus)
-{
-    border: var(--secondary) 2px solid;
-}
-
 
 .work-info, .education-info {
     gap: var(--small);
@@ -577,26 +627,27 @@ main {
 
 }
 
+/* Styling to handle the lists for experience and projects */
 .experience-list, .project-list {
     padding: var(--small) 0 var(--small) 0;
     gap: var(--small);
     flex: 1;
 }
 
-
-
+/* Styling for the 'view on github' buttons */
 .git-link {
-    text-decoration: underline var(--primary);
     width: fit-content;
     align-self: center;
 }
 
+/* Styling for the statistics for github */
 .github-stats {
     align-items: center;
     width: 100%;
     height: auto;
 }
 
+/*  */
 footer {
     background-color: var(--primary);
     color: var(--secondary-text);

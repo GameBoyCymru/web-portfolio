@@ -48,279 +48,274 @@
 <body>
 
 
-<header>
-    <nav class="navigation-bar">
-        <button class="nav-btn" type="button">
-            <img src="./Icons/menu-icon.svg" alt="Menu Icon" class="icon">
-        </button>
-        <h1 class="screen-title">Home</h1>
+    <header>
+        <nav class="navigation-bar">
+            <button class="nav-btn" type="button">
+                <img src="./Icons/menu-icon.svg" alt="Menu Icon" class="icon">
+            </button>
+            <h1 class="screen-title">Home</h1>
 
-        <button class="settings" type="button">
-            <img src="./Icons/settings-icon.svg" alt="Settings Icon" class="icon">
-        </button>
-    </nav>
-</header>
+            <button class="settings" type="button">
+                <img src="./Icons/settings-icon.svg" alt="Settings Icon" class="icon">
+            </button>
+        </nav>
+    </header>
 
-<!-- Page Navigation -->
+    <!-- Page Navigation -->
 
-<nav class="quick-nav none hide">
+    <nav class="quick-nav none hide">
 
-    <div class="quick-nav-headline">
-        <h2>Page Content</h2>
-        <button class="nav-close" type="button">
-            <img src="./Icons/close-icon.svg" class="icon exit" alt="Close Icon">
-        </button>
-    </div>
+        <div class="quick-nav-headline">
+            <h2>Page Content</h2>
+            <button class="nav-close" type="button">
+                <img src="./Icons/close-icon.svg" class="icon exit" alt="Close Icon">
+            </button>
+        </div>
 
-    <div class="quick-nav-content nav-menu">
-        <label class="menu-wrapper">
-                <span class="menu-label">
-                    <a class="nav-link" href="#home">Home</a>
-                </span>
-        </label>
-
-        <label class="menu-wrapper">
-                <span class="menu-label">
-                    <a class="nav-link" href="#about">About</a>
-                </span>
-        </label>
-
-        <label class="menu-wrapper">
-                <span class="menu-label">
-                    <a class="nav-link" href="#projects">Projects</a>
-                </span>
-        </label>
-
-        <label class="menu-wrapper">
-                <span class="menu-label">
-                    <a class="nav-link" href="#contact">Contact</a>
-                </span>
-        </label>
-
-    </div>
-
-</nav>
-
-<!-- Quick Settings -->
-<aside class="quick-settings none hide">
-
-    <div class="quick-settings-headline">
-        <h2>Quick Settings</h2>
-        <button class="settings-close" type="button">
-            <img src="./Icons/close-icon.svg" class="icon exit" alt="Close Icon">
-        </button>
-    </div>
-
-    <div class="quick-settings-content">
-
-        <div class="menu-content">
+        <div class="quick-nav-content nav-menu">
             <label class="menu-wrapper">
-                <span class="menu-label"><strong>Dark Mode</strong></span>
-                <span class="switch">
+                <a class="nav-link menu-label" href="#home">Home</a>
+            </label>
+
+            <label class="menu-wrapper">
+                <a class="nav-link menu-label" href="#about">About</a>
+            </label>
+
+            <label class="menu-wrapper">
+                <a class="nav-link menu-label" href="#projects">Projects</a>
+            </label>
+
+            <label class="menu-wrapper">
+                <a class="nav-link menu-label" href="#contact">Contact</a>
+            </label>
+
+        </div>
+
+    </nav>
+
+    <!-- Quick Settings -->
+    <aside class="quick-settings none hide">
+
+        <div class="quick-settings-headline">
+            <h2>Quick Settings</h2>
+            <button class="settings-close" type="button">
+                <img src="./Icons/close-icon.svg" class="icon exit" alt="Close Icon">
+            </button>
+        </div>
+
+        <div class="quick-settings-content">
+
+            <!-- Combination of labels and spans allow the user to click the title as well as the toggle -->
+            <div class="menu-content">
+                <label class="menu-wrapper">
+                    <span class="menu-label"><strong>Dark Mode</strong></span>
+                    <span class="switch">
                         <input type="checkbox" id="darkModeToggle">
                         <span class="slider round"></span>
-                </span>
-            </label>
-            <p class="switch-description">Toggle between light or dark mode.</p>
-        </div>
+                    </span>
+                </label>
+                <p class="switch-description">Toggle between light or dark mode.</p>
+            </div>
 
-        <div class="menu-content">
-            <label class="menu-wrapper">
-                <span class="menu-label"><strong>Easier Reading</strong></span>
-                <span class="switch">
+            <div class="menu-content">
+                <label class="menu-wrapper">
+                    <span class="menu-label"><strong>Easier Reading</strong></span>
+                    <span class="switch">
                         <input type="checkbox" id="boldTextToggle">
                         <span class="slider round"></span>
-                </span>
-            </label>
-            <p class="switch-description">Toggle between the standard text or an easier to read text style.</p>
-        </div>
+                    </span>
+                </label>
+                <p class="switch-description">Toggle between the standard text or an easier to read text style.</p>
+            </div>
 
-        <div class="menu-content">
-            <label class="menu-wrapper">
-                <span class="menu-label"><strong>Solid Colours</strong></span>
-                <span class="switch">
+            <div class="menu-content">
+                <label class="menu-wrapper">
+                    <span class="menu-label"><strong>Solid Colours</strong></span>
+                    <span class="switch">
                         <input type="checkbox" id="solidColoursToggle">
                         <span class="slider round"></span>
-                </span>
-            </label>
-            <p class="switch-description">Toggle between transparent or solid colours.</p>
+                    </span>
+                </label>
+                <p class="switch-description">Toggle between transparent or solid colours.</p>
+            </div>
+
         </div>
 
+    </aside>
+
+
+    <!-- Main Content -->
+
+    <div id="overlay">
+        <main>
+
+            <section id="home">
+                <section id="intro" class="content-box">
+                    <h1 class="title">Joshua Thomas</h1>
+                    <div id="typed">
+                        <p id="typing-text"></p>
+                    </div>
+                    <a class="button" id="intro-btn" href="#about">Read More</a>
+                </section>
+            </section>
+
+            <section id="about" class="content-box">
+                <h1 class="title">About Me</h1>
+                <section class="about-section">
+
+                    <section class="description">
+                        <img id="pfp" src="./Images/me.webp" alt="Picture of me holding parrots" title="Joshua Thomas">
+                        <p>
+                            I'm a 19-year-old undergraduate deeply immersed in the world of
+                            cybersecurity. Currently studying this dynamic field, my primary coding language is C++,
+                            complemented by my enjoyment of working with HTML, CSS, and JavaScript for web development
+                            projects.
+                            I also serve as a teaching assistant, helping first-year university students grasp the
+                            essentials of
+                            C++.
+                        </p>
+
+                        <img class="github-stats" id="language-stats"
+                            src="https://raw.githubusercontent.com/joshuathomas22/github-stats/master/generated/languages.svg#gh-dark-mode-only"
+                            alt="Programming languages usage" title="Programming languages usage">
+
+                        <h2>Additional Information</h2>
+                        <p>
+                            I'm a native Welsh speaker, fluent in both Welsh and English. I'm also a huge fan of
+                            video games, with my favourite being the Legend of Zelda series of games, because of the
+                            impressive visuals, storytelling and soundtracks.
+                        </p>
+                        <p>
+                            When I am not busy with university, I volunteer as a marshal every Sunday morning at my
+                            local
+                            'Junior Parkrun'.
+                        </p>
+                    </section>
+                </section>
+            </section>
+
+
+            <section id="experience" class="content-box">
+                <h1 class="title">Experience</h1>
+
+
+                <section class="work-info">
+                    <h2>Work</h2>
+                    <section class="info-box">
+                        <h3>C++ Teaching Assistant</h3>
+                        <h4>Bath Spa University</h4>
+                        <p>16/10/23 - Present</p>
+                    </section>
+                    <section class="info-box">
+                        <h3>Childcare Assistant</h3>
+                        <h4>Clwb Carco Menter Iaith</h4>
+                        <p>07/09/2021 - 15/07/2022</p>
+                    </section>
+                </section>
+
+
+                <section class="education-info">
+                    <h2>Education</h2>
+                    <section class="info-box">
+                        <h3>Bath Spa University | 2022 - 2025</h3>
+                        <ul class="experience-list">
+                            <li>BSc (Hons) Cyber Security</li>
+                        </ul>
+                    </section>
+                    <section class="info-box">
+                        <h3>Ysgol Garth Olwg | 2019 - 2022</h3>
+                        <h4>A Levels</h4>
+                        <ul class="experience-list">
+                            <li>Information Technology</li>
+                            <li>Mathematics</li>
+                            <li>Physics</li>
+                            <li>Welsh Baccalaureate</li>
+                        </ul>
+                    </section>
+                </section>
+
+            </section>
+
+
+            <section id="projects" class="content-box">
+                <h1 class="title">Projects</h1>
+                <section class="project-section">
+                    <section class="project">
+                        <h2>Web Portfolio</h2>
+                        <ul class="project-list">
+                            <li>HTML, CSS, JavaScript</li>
+                            <li>A multi-device website displaying my portfolio in a presentable manner.</li>
+                            <li>You're currently using this project!</li>
+                            <!-- Link on github -->
+                        </ul>
+                        <a class="git-link button" target="_blank"
+                            href="https://github.com/GameBoyCymru/web-portfolio">View
+                            on Github</a>
+                    </section>
+
+                    <section class="project">
+                        <h2>Student Manager</h2>
+                        <ul class="project-list">
+                            <li>C++</li>
+                            <li>Prompts the user to access data about students from a text file.</li>
+                            <li>Sorts the data based on user choice and gives the option to add/modify/delete data while
+                                the
+                                program is running.
+                            </li>
+                        </ul>
+                        <a class="git-link button" target="_blank"
+                            href="https://github.com/GameBoyCymru/Student-Manager">View
+                            on Github</a>
+                    </section>
+
+                    <section class="project">
+                        <h2>Sports League</h2>
+                        <ul class="project-list">
+                            <li>C++</li>
+                            <li>Simple interface for interacting with a simulated sports league table.</li>
+                            <li>It includes functionalities such as displaying divisions, points, a specific team, and
+                                teams
+                                in a particular position across all divisions.
+                            </li>
+                        </ul>
+                        <a class="git-link button" target="_blank"
+                            href="https://github.com/GameBoyCymru/Sports-League-Manager">View
+                            on Github</a>
+                    </section>
+                </section>
+
+            </section>
+
+
+            <section id="contact" class="content-box">
+                <h1 class="title">Contact</h1>
+                <section>
+                    <p>If you would like to get into contact with me for any reason, feel free to use any of the
+                        following
+                        platforms:
+                    </p>
+                </section>
+                <section class="logo-icons">
+                    <a href="mailto:joshua.thomas22@bathspa.ac.uk" class="logo-icon email">
+                        <img class="iconImg" src="./Icons/email.svg" alt="An email icon">
+                    </a>
+
+                    <a href="https://github.com/GameBoyCymru" target="_blank" class="logo-icon github">
+                        <img class="iconImg" src="./Icons/github.svg" alt="An icon of Github">
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/joshuathomas-dev/" target="_blank" class="logo-icon linkedin">
+                        <img class="iconImg" src="./Icons/linkedin.svg" alt="An icon of LinkedIn">
+                    </a>
+                </section>
+            </section>
+
+        </main>
     </div>
 
-</aside>
-
-
-<!-- Main Content -->
-
-<div id="overlay">
-    <main>
-
-        <section id="home">
-            <section id="intro" class="content-box">
-                <h1 class="title">Joshua Thomas</h1>
-                <div id="typed">
-                    <p id="typing-text"></p>
-                </div>
-                <a class="button" id="intro-btn" href="#about">Read More</a>
-            </section>
-        </section>
-
-        <section id="about" class="content-box">
-            <h1 class="title">About Me</h1>
-            <section class="about-section">
-
-                <section class="description">
-                    <img id="pfp" src="./Images/me.webp" alt="Picture of me holding parrots" title="Joshua Thomas">
-                    <p>
-                        I'm a 19-year-old undergraduate deeply immersed in the world of
-                        cybersecurity. Currently studying this dynamic field, my primary coding language is C++,
-                        complemented by my enjoyment of working with HTML, CSS, and JavaScript for web development
-                        projects.
-                        I also serve as a teaching assistant, helping first-year university students grasp the
-                        essentials of
-                        C++.
-                    </p>
-
-                    <img class="github-stats" id="language-stats"
-                         src="https://raw.githubusercontent.com/joshuathomas22/github-stats/master/generated/languages.svg#gh-dark-mode-only"
-                         alt="Programming languages usage" title="Programming languages usage">
-
-                    <h2>Additional Information</h2>
-                    <p>
-                        I'm a native Welsh speaker, fluent in both Welsh and English. I'm also a huge fan of
-                        video games, with my favourite being the Legend of Zelda series of games, because of the
-                        impressive visuals, storytelling and soundtracks.
-                    </p>
-                    <p>
-                        When I am not busy with university, I volunteer as a marshal every Sunday morning at my local
-                        'Junior Parkrun'.
-                    </p>
-                </section>
-            </section>
-        </section>
-
-
-        <section id="experience" class="content-box">
-            <h1 class="title">Experience</h1>
-
-
-            <section class="work-info">
-                <h2>Work</h2>
-                <section class="info-box">
-                    <h3>C++ Teaching Assistant</h3>
-                    <h4>Bath Spa University</h4>
-                    <p>16/10/23 - Present</p>
-                </section>
-                <section class="info-box">
-                    <h3>Childcare Assistant</h3>
-                    <h4>Clwb Carco Menter Iaith</h4>
-                    <p>07/09/2021 - 15/07/2022</p>
-                </section>
-            </section>
-
-
-            <section class="education-info">
-                <h2>Education</h2>
-                <section class="info-box">
-                    <h3>Bath Spa University | 2022 - 2025</h3>
-                    <ul class="experience-list">
-                        <li>BSc (Hons) Cyber Security</li>
-                    </ul>
-                </section>
-                <section class="info-box">
-                    <h3>Ysgol Garth Olwg | 2019 - 2022</h3>
-                    <h4>A Levels</h4>
-                    <ul class="experience-list">
-                        <li>Information Technology</li>
-                        <li>Mathematics</li>
-                        <li>Physics</li>
-                        <li>Welsh Baccalaureate</li>
-                    </ul>
-                </section>
-            </section>
-
-        </section>
-
-
-        <section id="projects" class="content-box">
-            <h1 class="title">Projects</h1>
-            <section class="project-section">
-                <section class="project">
-                    <h2>Web Portfolio</h2>
-                    <ul class="project-list">
-                        <li>HTML, CSS, JavaScript</li>
-                        <li>A multi-device website displaying my portfolio in a presentable manner.</li>
-                        <li>You're currently using this project!</li>
-                        <!-- Link on github -->
-                    </ul>
-                    <a class="git-link button" target="_blank"
-                       href="https://github.com/GameBoyCymru/web-portfolio">View
-                        on Github</a>
-                </section>
-
-                <section class="project">
-                    <h2>Student Manager</h2>
-                    <ul class="project-list">
-                        <li>C++</li>
-                        <li>Prompts the user to access data about students from a text file.</li>
-                        <li>Sorts the data based on user choice and gives the option to add/modify/delete data while the
-                            program is running.
-                        </li>
-                    </ul>
-                    <a class="git-link button" target="_blank"
-                       href="https://github.com/GameBoyCymru/Student-Manager">View
-                        on Github</a>
-                </section>
-
-                <section class="project">
-                    <h2>Sports League</h2>
-                    <ul class="project-list">
-                        <li>C++</li>
-                        <li>Simple interface for interacting with a simulated sports league table.</li>
-                        <li>It includes functionalities such as displaying divisions, points, a specific team, and teams
-                            in a particular position across all divisions.
-                        </li>
-                    </ul>
-                    <a class="git-link button" target="_blank"
-                       href="https://github.com/GameBoyCymru/Sports-League-Manager">View
-                        on Github</a>
-                </section>
-            </section>
-
-        </section>
-
-
-        <section id="contact" class="content-box">
-            <h1 class="title">Contact</h1>
-            <section>
-                <p>If you would like to get into contact with me for any reason, feel free to use any of the
-                    following
-                    platforms:
-                </p>
-            </section>
-            <section class="logo-icons">
-                <a href="mailto:joshua.thomas22@bathspa.ac.uk" class="logo-icon email">
-                    <img class="iconImg" src="./Icons/email.svg" alt="An email icon">
-                </a>
-
-                <a href="https://github.com/GameBoyCymru" target="_blank" class="logo-icon github">
-                    <img class="iconImg" src="./Icons/github.svg" alt="An icon of Github">
-                </a>
-
-                <a href="https://www.linkedin.com/in/joshuathomas-dev/" target="_blank"
-                   class="logo-icon linkedin">
-                    <img class="iconImg" src="./Icons/linkedin.svg" alt="An icon of LinkedIn">
-                </a>
-            </section>
-        </section>
-
-    </main>
-</div>
-
-<footer>
-    <strong>&copy; 2024 Joshua Thomas. All rights reserved.</strong>
-</footer>
+    <footer>
+        <strong>&copy; 2024 Joshua Thomas. All rights reserved.</strong>
+    </footer>
 
 </body>
 
