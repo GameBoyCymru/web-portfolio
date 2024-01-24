@@ -9,28 +9,43 @@
     font-style: normal;
 }
 
+/*Imports the Rockwell font so all devices can use it*/
+@font-face {
+    font-family: 'rockwell';
+    src: url("../Fonts/Rockwell.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
 
+/* 
+Sets the default values for all the variables on the page
+- All variables by default are set to the mobile values as well as dark mode
+*/
 :root {
+    /* Spacing */
     --small: 10px;
     --medium: 20px;
     --large: 40px;
     line-height: 1.4;
 
+    /* General Colours */
     --primary: #a39be3;
     --secondary: #7a2268;
     --background: rgba(6, 5, 20, 0.8);
     --background-image: url("../Backgrounds/island-dark.webp");
     --overlay: rgba(6, 5, 20, 0.4);
 
-
+    /* Text */
     --primary-text: #e7e6f7;
     --secondary-text: #131B23;
 
+    /* Navigation */
     --nav-background: rgb(6, 5, 20, 0.8);
     --nav-text: #e7e6f7;
     --exit-filter: invert(100%) sepia(0%) saturate(1513%) hue-rotate(233deg) brightness(107%) contrast(101%);
 }
 
+/* Removing default spacing */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -38,8 +53,8 @@
 }
 
 html {
+    /* smoothly scrolls if a link is clicked */
     scroll-behavior: smooth;
-    /* smooth scrolling */
 }
 
 
@@ -74,6 +89,7 @@ body {
 
 }
 
+/* Sets the image in the background with a blur effect */
 body::before {
     content: "";
     position: fixed;
@@ -92,31 +108,41 @@ body::before {
     -webkit-filter: blur(4px);
 }
 
+/* ................................................. */
+
+/* Heading should all use the rockwell font */
 h1, h2, h3, h4, h5, h6 {
-    font-family: rockwell, sans-serif, Arial;
+    font-family: 'rockwell', sans-serif, Arial;
 }
 
+/* Applies a margin to the list symbol (as the default was removed) */
 li {
    margin-left: var(--medium);
 }
 
+
+/* Sets the default styling for a button */
 button {
-    all: unset;
+    all: unset; 
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+/* Sets the default styling for a link */
 a {
     text-decoration: none;
     color: var(--primary-text);
 }
 
+/* Sets the effect for when a link is hovered over or focused */
 a:is(:hover, :focus) {
     text-decoration: underline var(--primary);
+    transform: scale(1.1);
 }
 
+/* Sets the styling for items that in html aren't buttons, but should be treated as one */
 .button {
     padding: var(--small);
     border-radius: var(--small);
@@ -136,6 +162,7 @@ html {
     /* smooth scrolling */
     scroll-padding-top: 100px;
 }
+
 
 header {
     height: 80px;
@@ -492,8 +519,10 @@ main {
 
 }
 
+
 .logo-icon:is(:hover, :focus) {
     border-radius: 50%;
+    transform: scale(1.25);
 }
 
 
@@ -526,7 +555,6 @@ main {
 .project:is(:hover, :focus)
 {
     border: var(--secondary) 2px solid;
-    transform: scale(1.045);
 }
 
 
