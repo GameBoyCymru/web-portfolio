@@ -428,6 +428,7 @@ main {
 
 .about-section {
     gap: var(--small);
+    padding: var(--small) 0;
 }
 
 
@@ -437,6 +438,11 @@ main {
     object-fit: contain;
     border-radius: 20%;
     margin: 0 auto;
+}
+
+#pfp:is(:hover, :focus) {
+    border: var(--secondary) 2px solid;
+    transform: scale(1.1);
 }
 
 
