@@ -1,21 +1,29 @@
 /* Imports the Poppins font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
+/* @import url('https://fonts.cdnfonts.com/css/rockwell-nova'); */
+
 /*Imports the Comic Sans font so all devices can use it*/
 @font-face {
     font-family: 'Comic Sans';
     src: url("../Fonts/ComicSansMS3.ttf");
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
-/*Imports the Rockwell font so all devices can use it*/
 @font-face {
-    font-family: 'rockwell';
-    src: url("../Fonts/Rockwell.TTF");
+    font-family: 'Rockwell Nova', sans-serif;
+    font-family: 'Rockwell Nova Cond', sans-serif;
+    font-family: 'Rockwell Nova Light', sans-serif;
+    font-family: 'Rockwell Nova Cond Light', sans-serif;
+    font-family: 'Rockwell Nova Extra Bold', sans-serif;
+    src: url(https://fonts.cdnfonts.com/css/rockwell-nova);
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
+
 
 /* 
 Sets the default values for all the variables on the page
@@ -115,7 +123,7 @@ body::before {
 
 /* Heading should all use the rockwell font */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'rockwell', sans-serif, Arial;
+    font-family: 'Rockwell Nova', sans-serif, Arial;
 }
 
 /* Applies a margin to the list symbol (as the default was removed) */
@@ -516,13 +524,14 @@ main {
     object-fit: contain;
     border-radius: 20%;
     margin: 0 auto;
+    transition: all 0.2s ease-in-out;
 }
 
 /* Increases the size of profile picture if the user hovers or  */
 #pfp:is(:hover, :focus) {
     border: var(--secondary) 2px solid;
     transform: scale(1.1);
-    transition: all 0.2s ease-in-out;
+    
 }
 
 /* Centres the description to be in the centre of the container */
