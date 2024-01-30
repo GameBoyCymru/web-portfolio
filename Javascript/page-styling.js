@@ -141,3 +141,92 @@ if (savedSolidColoursPreference !== null) {
     solidColoursCheckbox.checked = false;
     toggleSolidColours();
 }
+
+
+/*
+------------------------------------------------------------
+*/
+
+let isBold = false; // Sets the default state to false
+
+// Function to set the font style based on the user's preference
+function setFontStyle() {
+    const body = document.body;
+    const storedFontPreference = localStorage.getItem('fontPreference');
+
+    // If there is a stored font preference, apply it
+    if (storedFontPreference) {
+        body.style.fontFamily = storedFontPreference;
+    }
+
+    // Get the checkbox for bold text
+    const boldTextCheckbox = document.getElementById('boldTextToggle');
+
+    // Check the stored state of the checkbox
+    const storedCheckboxState = localStorage.getItem('checkboxState');
+
+    if (storedCheckboxState) {
+        boldTextCheckbox.checked = storedCheckboxState === 'true';
+        // Apply the bold text styling based on the checkbox state
+        applyBoldText();
+    }
+}
+
+// Function to apply bold text styling
+function applyBoldText() {
+    // Get all the paragraph and list elements on the page
+    const elements = document.querySelectorAll('p, li');
+
+    // Iterate through each element
+    elements.forEach(element => {
+        // Split the text into words
+        const words = element.textContent.split(' ');
+
+        // Iterate through each word and toggle bold styling for the first two letters
+        const formattedWords = words.map(word => {
+            if (word.length >= 2) {
+                return isBold ? `<b>${word.substring(0, 2)}</b>${word.substring(2)}` : word;
+            }
+            return word;
+        });
+
+        // Set the inner HTML of the element with the formatted text
+        element.innerHTML = formattedWords.join(' ');
+    });
+}
+
+// Function to toggle bold text and change the font
+function toggleBoldText() {
+    // Get the checkbox for bold text
+    const boldTextCheckbox = document.getElementById('boldTextToggle');
+
+    // Read the current checkbox state
+    const checkboxState = boldTextCheckbox.checked;
+
+    // Update the isBold variable
+    isBold = checkboxState;
+
+    // Apply the bold text styling based on the checkbox state
+    applyBoldText();
+
+    // Change the font of the entire page only if the checkbox is checked
+    const body = document.body;
+    body.style.fontFamily = checkboxState ? 'Comic Sans' : 'Poppins';
+
+    // Save the font preference to localStorage
+    localStorage.setItem('fontPreference', checkboxState ? 'Comic Sans' : 'Poppins');
+
+    // Save the checkbox state to localStorage
+    localStorage.setItem('checkboxState', checkboxState);
+}
+
+// Call setFontStyle on page load to apply stored font preference and checkbox state
+setFontStyle();
+
+// Call toggleBoldText on checkbox change
+document.getElementById('boldTextToggle').addEventListener('change', toggleBoldText);
+
+
+/*
+------------------------------------------------------------
+*/
