@@ -123,6 +123,14 @@ li {
    margin-left: var(--medium);
 }
 
+/* Prevents the images from being dragged */
+img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-select: none;
+  }
 
 /* Sets the default styling for a button */
 button {
@@ -514,6 +522,7 @@ main {
 #pfp:is(:hover, :focus) {
     border: var(--secondary) 2px solid;
     transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
 }
 
 /* Centres the description to be in the centre of the container */
