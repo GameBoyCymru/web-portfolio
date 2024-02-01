@@ -10,9 +10,9 @@ var typed = new Typed('#typing-text', {
     loop: true
 });
 
-/*
-------------------------------------------------------------
-*/
+
+/*------------------------------------------------------------*/
+
 
 // Page Navigation
 
@@ -46,26 +46,27 @@ closeNav.addEventListener('click', () => {
 
 // Close quick settings and quick navigation if clicked outside
 document.addEventListener('click', (event) => {
+    // Close quick settings if clicked outside
     if (!quickSettings.contains(event.target) && !settingsButton.contains(event.target)) {
         quickSettings.classList.add('hide');
     }
 
+    // Close quick navigation if clicked outside
     if (!navSettings.contains(event.target) && !navButton.contains(event.target)) {
         navSettings.classList.add('hide');
     }
 });
 
 
-/*
-------------------------------------------------------------
-*/
+/*------------------------------------------------------------*/
 
 
 // Update screen title based on scroll position
 
+// Wait for the DOM to load
 document.addEventListener("DOMContentLoaded", function () {
-    const sections = document.querySelectorAll("section.content-box");
-    const screenTitle = document.querySelector(".screen-title");
+    const sections = document.querySelectorAll("section.content-box");  // Get all sections
+    const screenTitle = document.querySelector(".screen-title");    // Get the screen title
 
     // Function to update the screen title based on the active section
     function updateScreenTitle() {
@@ -102,7 +103,4 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-/*
-------------------------------------------------------------
-*/
 

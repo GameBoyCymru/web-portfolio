@@ -16,6 +16,7 @@ function toggleDarkMode() {
 
     // Apply dark mode if the checkbox is checked
     if (darkModeCheckbox.checked) {
+        // Apply dark mode colors
         document.documentElement.style.setProperty('--primary', '#a39be3');
         document.documentElement.style.setProperty('--secondary', '#7a2268');
         document.documentElement.style.setProperty('--background-image', 'url("../Backgrounds/island-dark.webp")');
@@ -23,7 +24,8 @@ function toggleDarkMode() {
         document.documentElement.style.setProperty('--secondary-text', '#131B23');
         document.documentElement.style.setProperty('--nav-text', '#e7e6f7');
         document.documentElement.style.setProperty('--exit-filter', 'invert(100%) sepia(0%) saturate(1513%) hue-rotate(233deg) brightness(107%) contrast(101%)');
-
+        
+        // Apply solid colours if the checkbox is checked
         if (solidColoursCheckbox.checked) {
             document.documentElement.style.setProperty('--background', 'rgba(6, 5, 20, 1)');
             document.documentElement.style.setProperty('--nav-background', 'rgb(6 5 20 / 1)');
